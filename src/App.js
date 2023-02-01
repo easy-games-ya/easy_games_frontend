@@ -3,10 +3,10 @@ import './App.css';
 
 const App = () => {
   return (
-    <div className="page">
+    <div className='page'>
       Простые игры
     </div>
   );
-}
+};
 
 export default App;
