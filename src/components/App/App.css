@@ -3,6 +3,7 @@
   flex-direction: column;
   margin: 0 auto;
   width: 1920px;
+  min-height: 1080px;
   font-family: 'Montserrat', Arial, sans-serif;
   color: var(--color-text-base);
 }
