@@ -2,21 +2,25 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import MainPage from '../../pages/MainPage/MainPage';
-import OwnGamePage from '../../pages/OwnGamePage/OwnGamePage';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
+
+import ItGame from '../../games/ItGame/index';
+import MainPageItGame from '../../games/ItGame/pages/MainPage/MainPage';
+import WelcomePageItGame from '../../games/ItGame/pages/WelcomePage/WelcomePage';
 
 const App = () => {
   // eslint-disable-next-line no-unused-vars
   const [loggedIn, setLoggedIn] = React.useState(false); // пользователь вошёл в учётную запись?
 
   return (
-    <div className='page'>
-      <Routes>
-        <Route path='/' element={<MainPage />} />
-        <Route path='/own-game' element={<OwnGamePage />} />
-        <Route path='*' element={<NotFoundPage />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path='/' element={<MainPage />} />
+      <Route path='/it-game' element={<ItGame />}>
+        <Route path='' element={<MainPageItGame />} />
+        <Route path='welcome' element={<WelcomePageItGame />} />
+      </Route>
+      <Route path='*' element={<NotFoundPage />} />
+    </Routes>
   );
 };
 
