@@ -1,0 +1,29 @@
+.playing-card {
+  width: 250px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 100px;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: center;
+  color: var( --color-text-addtional);
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 15px;
+  transition-duration: .7s;
+  cursor: pointer;
+}
+
+.playing-card:hover {
+  opacity: .77;
+}
+
+.playing-card__inactive {
+  opacity: .15;
+}
+
+.playing-card__inactive:hover {
+  opacity: .15;
+}
