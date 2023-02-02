@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import MainPage from '../../pages/MainPage/MainPage';
-import OwnGamePage from '../../pages/OwnGamePage/OwnGamePage';
+import ItGamePage from '../../pages/ItGamePage/ItGamePage';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 
 const App = () => {
@@ -10,13 +10,11 @@ const App = () => {
   const [loggedIn, setLoggedIn] = React.useState(false); // пользователь вошёл в учётную запись?
 
   return (
-    <div className='page'>
-      <Routes>
-        <Route path='/' element={<MainPage />} />
-        <Route path='/own-game' element={<OwnGamePage />} />
-        <Route path='*' element={<NotFoundPage />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path='/' element={<MainPage />} />
+      <Route path='/it-game' element={<ItGamePage />} />
+      <Route path='*' element={<NotFoundPage />} />
+    </Routes>
   );
 };
 
