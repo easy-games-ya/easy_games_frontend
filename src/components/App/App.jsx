@@ -4,7 +4,7 @@ import './App.css';
 import MainPage from '../../pages/MainPage/MainPage';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 
-import ItGamePage from '../../games/ItGame/index';
+import ItGame from '../../games/ItGame/index';
 import MainPageItGame from '../../games/ItGame/pages/MainPage/MainPage';
 import WelcomePageItGame from '../../games/ItGame/pages/WelcomePage/WelcomePage';
 
@@ -15,8 +15,7 @@ const App = () => {
   return (
     <Routes>
       <Route path='/' element={<MainPage />} />
-      <Route path='/it-game' element={<ItGamePage />} />
-      <Route path='/it-game' element={<ItGamePage />}>
+      <Route path='/it-game' element={<ItGame />}>
         <Route path='' element={<MainPageItGame />} />
         <Route path='welcome' element={<WelcomePageItGame />} />
       </Route>
