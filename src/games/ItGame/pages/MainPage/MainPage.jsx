@@ -1,13 +1,11 @@
 import React from 'react';
 import './MainPage.css';
-import itGameLogo from '../../../../images/it-game__logo.svg';
+import Header from '../../components/Header/Header';
 
 const MainPage = () => {
   return (
     <div className='page'>
-      <header className='header'>
-        <img className='header__logo' src={itGameLogo} alt='Своя игра' />
-      </header>
+      <Header />
       <main className='main'>
         <section className='grid-section'>
           <div className='grid'>Игра-викторина &quot;Своя игра&quot;</div>
