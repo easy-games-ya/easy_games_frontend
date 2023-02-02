@@ -1,30 +1,43 @@
 import React from 'react';
 import './InfoSection.css';
+import ProfileCard from '../ProfileCard/ProfileCard';
+import RecordCard from '../RecordCard/RecordCard';
 import avatar from '../../../../images/it-game_avatar.svg';
 
 const InfoSection = () => {
+  const [recordsList, setRecordsList] = React.useState([]); // список рекордов для этой игры
+
+  React.useEffect(() => {
+    setRecordsList([ // будет запрашиваться с бэкенда
+      {
+        id: 1,
+        name: 'Леонардо',
+        score: '4500',
+      },
+      {
+        id: 2,
+        name: 'Донателло',
+        score: '2300',
+      },
+      {
+        id: 3,
+        name: 'Рафаэль',
+        score: '3300',
+      },
+    ]);
+  }, []);
+
   return (
     <section className='info-section'>
-      <div className='profile-card'>
-        <img className='profile-card__avatar' src={avatar} alt='Аватарка' />
-        <p className='profile-card__name'>Иероним</p>
-        <p className='profile-card__score'>1250</p>
-      </div>
+      <ProfileCard name='Иероним' avatar={avatar} score='1250' />
       <div className='info-section__records'>
         <p className='info-section__records-caption'>Лучшие результаты</p>
         <ul className='info-section__records-row'>
-          <li className='record-card'>
-            <p className='record-card__name'>Леонардо</p>
-            <p className='record-card__score'>4500</p>
-          </li>
-          <li className='record-card'>
-            <p className='record-card__name'>Донателло</p>
-            <p className='record-card__score'>2300</p>
-          </li>
-          <li className='record-card'>
-            <p className='record-card__name'>Рафаэль</p>
-            <p className='record-card__score'>3300</p>
-          </li>
+          {recordsList.map((card) => {
+            return (
+              <RecordCard key={card.id} name={card.name} score={card.score} />
+            );
+          })}
         </ul>
       </div>
       <p className='info-section__time'>00:30</p>
