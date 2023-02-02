@@ -1,9 +1,9 @@
 import React from 'react';
 import './PlayingCard.css';
 
-const PlayingCard = ({ children, id }) => {
+const PlayingCard = ({ children, key }) => {
   return (
-    <li className='playing-card' key={id}>{children}</li>
+    <li className='playing-card' key={key}>{children}</li>
   );
 };
 
