@@ -1,8 +1,8 @@
 import React from 'react';
-import './ItGamePage.css';
-import itGameLogo from '../../images/it-game__logo.svg';
+import './MainPage.css';
+import itGameLogo from '../../../../images/it-game__logo.svg';
 
-const OwnGamePage = () => {
+const MainPage = () => {
   return (
     <div className='page'>
       <header className='header'>
@@ -42,4 +42,4 @@ const OwnGamePage = () => {
   );
 };
 
-export default OwnGamePage;
+export default MainPage;
