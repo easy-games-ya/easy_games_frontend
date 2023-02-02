@@ -9,23 +9,23 @@ const PlayingField = () => {
   React.useEffect(() => {
     setThemesList([ // будет запрашиваться с бэкенда
       {
-        id: 1,
+        id: 101,
         theme: 'Тема 1',
       },
       {
-        id: 2,
+        id: 102,
         theme: 'Тема 2',
       },
       {
-        id: 3,
+        id: 103,
         theme: 'Тема 3',
       },
       {
-        id: 4,
+        id: 104,
         theme: 'Тема 4',
       },
       {
-        id: 5,
+        id: 105,
         theme: 'Тема 5',
       },
     ]);
@@ -137,12 +137,12 @@ const PlayingField = () => {
     <section className='playing-field'>
       <ul className='playing-field__themes'>
         {themesList.map((card) => {
-          return (<PlayingCard key={card.id}>{card.theme}</PlayingCard>);
+          return (<PlayingCard id={card.id}>{card.theme}</PlayingCard>);
         })}
       </ul>
       <ul className='playing-field__questions'>
         {questionsList.map((card) => {
-          return (<PlayingCard key={card.id}>{card.cost}</PlayingCard>);
+          return (<PlayingCard id={card.id}>{card.cost}</PlayingCard>);
         })}
       </ul>
     </section>
