@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './PlayingCard.css';
 
-const PlayingCard = ({ children, key }) => {
+const PlayingCard = ({ children, id }) => {
   return (
-    <li className='playing-card' key={key}>{children}</li>
+    <Link className='playing-card' to={`question/${id}`}>{children}</Link>
   );
 };
 

@@ -35,7 +35,7 @@ const InfoSection = () => {
         <ul className='info-section__records-row'>
           {recordsList.map((card) => {
             return (
-              <RecordCard key={card.id} name={card.name} score={card.score} />
+              <RecordCard key={card.id} id={card.id} name={card.name} score={card.score} />
             );
           })}
         </ul>

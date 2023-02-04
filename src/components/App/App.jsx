@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import MainPage from '../../pages/MainPage/MainPage';
+import QuestionPage from '../../games/ItGame/pages/QuestionPage/QuestionPage';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 
 import ItGame from '../../games/ItGame/index';
@@ -18,6 +19,7 @@ const App = () => {
       <Route path='/it-game' element={<ItGame />}>
         <Route path='' element={<MainPageItGame />} />
         <Route path='welcome' element={<WelcomePageItGame />} />
+        <Route path='question/:id' element={<QuestionPage />} />
       </Route>
       <Route path='*' element={<NotFoundPage />} />
     </Routes>
