@@ -1,12 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import './QuestionPage.css';
+
 import Header from '../../components/Header/Header';
+import Question from '../../components/Question/Question';
+import Answer from '../../components/Answer/Answer';
 import questionImage from '../../../../images/it-game_image.jpg';
 
 const QuestionPage = () => {
   const { id } = useParams(); // id вопроса, получаемый из url-адреса текущей страницы
   const [question, setQuestion] = React.useState({}); // информация о вопросе
+  // eslint-disable-next-line no-unused-vars
+  const [answerOpened, setAnswerOpened] = React.useState(false); // открыт модуль с ответом?
+  // eslint-disable-next-line no-unused-vars
+  const [isCorrectAnser, setIsCorrectAnser] = React.useState(true); // ответ правильный?
 
   React.useEffect(() => {
     if (id % 2 === 1) {
@@ -28,24 +34,8 @@ const QuestionPage = () => {
   return (
     <div className='page'>
       <Header />
-      <main className='main question'>
-        {
-          question.image
-        && <img className='question__image' src={question.image} alt='изображение' />
-        }
-        {
-          question.question
-        && <p className='question__text'>{question.question}</p>
-        }
-        <form className='question__form'>
-          <input className='question__input' />
-          <button className='button' type='submit'>
-            <span style={{ color: 'var(--color-text-accent)' }}>О</span>
-            тветить
-          </button>
-        </form>
-        <p className='question__time'>00:22</p>
-      </main>
+      <Question image={question.image} question={question.question} answerOpened={answerOpened} />
+      <Answer answerOpened={answerOpened} isCorrectAnser={isCorrectAnser} />
     </div>
   );
 };
