@@ -1,0 +1,19 @@
+.answer {
+  justify-content: center;
+  min-height: 1064px;
+}
+
+.answer__text {
+  margin: 105px auto 63px;
+  padding: 0;
+  font-size: 60px;
+  line-height: 73px;
+  font-weight: 600;
+}
+
+.answer__image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  object-fit: fill;
+}
