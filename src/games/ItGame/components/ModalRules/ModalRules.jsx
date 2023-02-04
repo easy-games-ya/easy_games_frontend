@@ -1,9 +1,9 @@
 import React from 'react';
 import './ModalRules.css';
 
-const ModalRules = () => {
+const ModalRules = ({ closePopup }) => {
   return (
-    <div className='modal-rules'>
+    <div className='modal-rules' onClick={closePopup}>
       <div className='modal-container'>
         <h3 className='modal__title'>Праила игры</h3>
         <ol>

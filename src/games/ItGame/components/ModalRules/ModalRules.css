@@ -1,4 +1,4 @@
-.modal-rules {
+.modal-container {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -9,6 +9,11 @@
   color: black;
   padding: 40px;
 }
+
+.modal-rules {
+  background-color: rgba(0,0,0,0.5);
+
+}
 .modal__title {
   font-weight: 700;
   padding: 0;
@@ -18,6 +23,7 @@
   text-transform: uppercase;
   color: #ffea28;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 .modal-rules__text {
   font-style: normal;
