@@ -1,0 +1,30 @@
+.modal-rules {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  background-color: #7B44A6;
+  border: 3px solid #ffea28;
+  border-radius: 15px;
+  color: black;
+  padding: 40px;
+}
+.modal__title {
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 40px;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
+  color: #ffea28;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.modal-rules__text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
