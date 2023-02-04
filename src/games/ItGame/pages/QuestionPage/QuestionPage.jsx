@@ -9,25 +9,42 @@ const QuestionPage = () => {
   const [question, setQuestion] = React.useState({}); // информация о вопросе
 
   React.useEffect(() => {
-    setQuestion({ // будет запрашиваться с бэкенда
-      id,
-      image: questionImage,
-      question: `В 2011 году на спектакле в лондонском театре Barbican зрителям вместо кресел предлагались кровати,
+    if (id % 2 === 1) {
+      setQuestion({ // будет запрашиваться с бэкенда
+        id: 1,
+        question: `В 2011 году на спектакле в лондонском театре Barbican зрителям вместо кресел предлагались кровати,
       а завершалась программа утренним завтраком.
       Как назывался спектакль?`,
-    });
+      });
+    }
+    if (id % 2 === 0) {
+      setQuestion({ // будет запрашиваться с бэкенда
+        id: 1,
+        image: questionImage,
+      });
+    }
   }, [id]);
 
   return (
     <div className='page'>
       <Header />
       <main className='main question'>
-        <p className='question__text'>{question.question}</p>
-        <img className='question__image' src={question.image} alt='изображение' />
-        <form>
-          <input />
-          <button className='button' type='submit'>Ответить</button>
+        {
+          question.image
+        && <img className='question__image' src={question.image} alt='изображение' />
+        }
+        {
+          question.question
+        && <p className='question__text'>{question.question}</p>
+        }
+        <form className='question__form'>
+          <input className='question__input' />
+          <button className='button' type='submit'>
+            <span style={{ color: 'var(--color-text-accent)' }}>О</span>
+            тветить
+          </button>
         </form>
+        <p className='question__time'>00:22</p>
       </main>
     </div>
   );
