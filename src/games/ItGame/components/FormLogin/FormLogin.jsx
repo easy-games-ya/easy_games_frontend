@@ -2,18 +2,26 @@ import React from 'react';
 
 import './FormLogin.css';
 
-const FormLogin = () => {
+const FormLogin = ({ formSubmit, onchange }) => {
   return (
 
-    <form className='form' action=''>
+    <form className='form' action='' method='get' name='form-login' onSubmit={formSubmit}>
       <fieldset className='form__fieldset'>
-        <label htmlFor=''>
-          <input className='form__input' type='text' placeholder='Введите своё имя...' />
+        <label htmlFor='name'>
+          <input
+            className='form__input'
+            id='name'
+            name='name'
+            type='text'
+            onChange={onchange}
+            placeholder='Введите своё имя...'
+          />
         </label>
-        <label htmlFor=''>
-          <select className='form__select' name='' id=''>
-            <option value=''>М</option>
-            <option value=''>Ж</option>
+        <label htmlFor='gender'>
+          {/* TODO не работает выбор гендера по умолчанию. возможно изза onChange */}
+          <select className='form__select' defaultValue='men' id='gender' name='gender' onChange={onchange}>
+            <option value='men'>М</option>
+            <option value='woman'>Ж</option>
           </select>
         </label>
       </fieldset>
