@@ -137,12 +137,20 @@ const PlayingField = () => {
     <section className='playing-field'>
       <ul className='playing-field__themes'>
         {themesList.map((card) => {
-          return (<PlayingCard key={card.id}>{card.theme}</PlayingCard>);
+          return (
+            <li className='playing-field__item' key={card.id}>
+              <PlayingCard id={card.id}>{card.theme}</PlayingCard>
+            </li>
+          );
         })}
       </ul>
       <ul className='playing-field__questions'>
         {questionsList.map((card) => {
-          return (<PlayingCard key={card.id}>{card.cost}</PlayingCard>);
+          return (
+            <li className='playing-field__item' key={card.id}>
+              <PlayingCard id={card.id}>{card.cost}</PlayingCard>
+            </li>
+          );
         })}
       </ul>
     </section>
