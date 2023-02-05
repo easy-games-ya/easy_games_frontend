@@ -12,7 +12,7 @@ import WelcomePageItGame from '../../games/ItGame/pages/WelcomePage/WelcomePage'
 
 const App = () => {
   // eslint-disable-next-line no-unused-vars
-  const [loggedIn, setLoggedIn] = React.useState(false); // пользователь вошёл в учётную запись?
+  const [loggedIn, setLoggedIn] = React.useState(true); // пользователь вошёл в учётную запись?
 
   return (
     <Routes>
