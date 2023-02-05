@@ -6,7 +6,7 @@ import ModalRules from '../../components/ModalRules/ModalRules';
 
 const WelcomePage = () => {
   const [openRules, setOpenRules] = useState(false);
-  const [formParams, setFormParams] = useState({ name: '', gender: 'men' });
+  const [formParams, setFormParams] = useState({ name: '', gender: 'man' });
 
   const openedRules = () => {
     setOpenRules(true);
@@ -22,8 +22,6 @@ const WelcomePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const { name, gender } = formParams;
-
     console.log(formParams);
   };
 
@@ -36,19 +34,20 @@ const WelcomePage = () => {
 
   return (
     <div className='page'>
-      <div role='button' tabIndex={0} className='page-container' onKeyDown={closedRules}>
+      <div className='page-container' role='button' tabIndex={0} onKeyDown={closedRules}>
 
         <div className='welcome-page'>
           <img className='welcome-page__logo' src={itGameLogo} alt='' />
           <h1 className='welcome-page__title'>добро пожаловать!</h1>
           <FormLogin formSubmit={handleSubmit} onchange={handleChange} />
-          {/* TODO проблема */}
-          {openRules ? <ModalRules closeRules={closedRules} /> : ''}
+          {openRules ? <ModalRules closeRules={closedRules} /> : null}
         </div>
-        <button type='button' className='welcome-page__text' onClick={openedRules}>
+
+        <button className='welcome-page__text' type='button' onClick={openedRules}>
           <span className='form__button_yellow-letter'>П</span>
           равила
         </button>
+
       </div>
     </div>
   );

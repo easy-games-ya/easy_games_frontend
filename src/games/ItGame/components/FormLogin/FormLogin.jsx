@@ -7,6 +7,7 @@ const FormLogin = ({ formSubmit, onchange }) => {
 
     <form className='form' action='' method='get' name='form-login' onSubmit={formSubmit}>
       <fieldset className='form__fieldset'>
+
         <label htmlFor='name'>
           <input
             className='form__input'
@@ -17,14 +18,16 @@ const FormLogin = ({ formSubmit, onchange }) => {
             placeholder='Введите своё имя...'
           />
         </label>
+
         <label htmlFor='gender'>
-          {/* TODO не работает выбор гендера по умолчанию. возможно изза onChange */}
-          <select className='form__select' defaultValue='men' id='gender' name='gender' onChange={onchange}>
-            <option value='men'>М</option>
+          <select className='form__select' defaultValue='man' id='gender' name='gender' onChange={onchange}>
+            <option value='man'>М</option>
             <option value='woman'>Ж</option>
           </select>
         </label>
+
       </fieldset>
+
       <button className='form__button' type='submit'>
         <span className='form__button_yellow-letter'>В</span>
         ход
