@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './WelcomePage.css';
 import FormLogin from '../../components/FormLogin/FormLogin';
-import itGameLogo from '../../../../images/it-game_logo.svg';
+import itGameBigLogo from '../../../../images/it-game_big-logo.svg';
 import ModalRules from '../../components/ModalRules/ModalRules';
 
 const WelcomePage = () => {
@@ -37,7 +37,7 @@ const WelcomePage = () => {
       <div className='page-container' role='button' tabIndex={0} onKeyDown={closedRules}>
 
         <div className='welcome-page'>
-          <img className='welcome-page__logo' src={itGameLogo} alt='' />
+          <img className='welcome-page__logo' src={itGameBigLogo} alt='' />
           <h1 className='welcome-page__title'>добро пожаловать!</h1>
           <FormLogin formSubmit={handleSubmit} onchange={handleChange} />
           {openRules ? <ModalRules closeRules={closedRules} /> : null}
