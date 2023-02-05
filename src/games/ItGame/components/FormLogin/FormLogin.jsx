@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './FormLogin.css';
+import Button from '../../ui/button';
 
 const FormLogin = ({ formSubmit, onchange }) => {
   return (
@@ -27,11 +28,7 @@ const FormLogin = ({ formSubmit, onchange }) => {
         </label>
 
       </fieldset>
-
-      <button className='form__button' type='submit'>
-        <span className='form__button_yellow-letter'>В</span>
-        ход
-      </button>
+      <Button isSubmit text='Вход' isDisabled />
 
     </form>
   );
