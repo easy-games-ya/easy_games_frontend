@@ -35,7 +35,7 @@
   font-family: 'Montserrat', Arial, sans-serif;
 }
 .modal__list {
-  margin: 0;
+  margin: 0 0 0 40px;
   padding: 0;
 }
 
