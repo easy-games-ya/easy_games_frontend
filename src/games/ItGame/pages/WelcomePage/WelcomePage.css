@@ -18,6 +18,8 @@
   line-height: 48px;
   margin: 80px 0 140px;
   padding: 0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .welcome-page__logo {
@@ -35,4 +37,5 @@
   cursor: pointer;
   background: none;
   border: none;
+  letter-spacing: 0.02em;
 }
