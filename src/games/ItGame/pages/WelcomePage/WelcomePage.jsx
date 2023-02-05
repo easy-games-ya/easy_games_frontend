@@ -3,6 +3,7 @@ import './WelcomePage.css';
 import FormLogin from '../../components/FormLogin/FormLogin';
 import itGameBigLogo from '../../../../images/it-game_big-logo.svg';
 import ModalRules from '../../components/ModalRules/ModalRules';
+import TextYellowFirstLetter from '../../ui/TextYellowFirstLetter/TextYellowFirstLetter';
 
 const WelcomePage = () => {
   const [openRules, setOpenRules] = useState(false);
@@ -44,8 +45,7 @@ const WelcomePage = () => {
         </div>
 
         <button className='welcome-page__text' type='button' onClick={openedRules}>
-          <span className='form__button_yellow-letter'>П</span>
-          равила
+          <TextYellowFirstLetter text='Правила' />
         </button>
 
       </div>
