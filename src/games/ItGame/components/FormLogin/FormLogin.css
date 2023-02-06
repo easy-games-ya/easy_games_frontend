@@ -35,23 +35,6 @@
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.form__label-select {
-  position: absolute;
-  right: -85px;
-}
-
-.form__select {
-  width: 65px;
-  height: 65px;
-  font-size: 25px;
-  font-weight: 500;
-  border-radius: 15px;
-  margin: 0;
-  box-sizing: border-box;
-  padding-left: 10px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .form__button {
   width: 250px;
   height: 65px;

@@ -7,7 +7,7 @@ import TextYellowFirstLetter from '../../ui/TextYellowFirstLetter/TextYellowFirs
 
 const WelcomePage = () => {
   const [openRules, setOpenRules] = useState(false);
-  const [formParams, setFormParams] = useState({ name: '', gender: 'man' });
+  const [formParams, setFormParams] = useState({ name: '' });
 
   const openedRules = () => {
     setOpenRules(true);

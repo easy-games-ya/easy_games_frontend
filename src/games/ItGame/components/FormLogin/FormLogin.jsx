@@ -20,15 +20,8 @@ const FormLogin = ({ formSubmit, onchange }) => {
           />
         </label>
 
-        <label className='form__label-select' htmlFor='gender'>
-          <select className='form__select' defaultValue='man' id='gender' name='gender' onChange={onchange}>
-            <option value='man'>М</option>
-            <option value='woman'>Ж</option>
-          </select>
-        </label>
-
       </fieldset>
-      <Button isSubmit text='Вход' isDisabled />
+      <Button isSubmit text='Вход' />
 
     </form>
   );
