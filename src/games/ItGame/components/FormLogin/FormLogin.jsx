@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './FormLogin.css';
-import Button from '../../ui/button';
+import Button from '../../ui/Button/button';
 
 const FormLogin = ({ formSubmit, onchange }) => {
   return (

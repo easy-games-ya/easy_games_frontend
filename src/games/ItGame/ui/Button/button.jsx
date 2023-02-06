@@ -1,6 +1,6 @@
 import React from 'react';
 import './button.css';
-import TextYellowFirstLetter from './TextYellowFirstLetter/TextYellowFirstLetter';
+import TextYellowFirstLetter from '../TextYellowFirstLetter/TextYellowFirstLetter';
 
 const Button = ({ isSubmit, isDisabled, text }) => {
   return (
