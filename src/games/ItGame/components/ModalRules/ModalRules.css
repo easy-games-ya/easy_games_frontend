@@ -2,8 +2,8 @@
   position: fixed;
   max-width: 500px;
   height: 500px;
-  background-color: #7B44A6;
-  border: 3px solid #ffea28;
+  background-color: var(--color-backgroiund-base);
+  border: 3px solid var(--color-text-accent);
   border-radius: 15px;
   color: black;
   padding: 40px;
@@ -32,7 +32,6 @@
   text-transform: uppercase;
   color: #ffea28;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: 'Montserrat', Arial, sans-serif;
 }
 .modal__list {
   margin: 0 0 0 40px;
@@ -45,6 +44,6 @@
   font-size: 30px;
   line-height: 37px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: var(--color-text-base);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
