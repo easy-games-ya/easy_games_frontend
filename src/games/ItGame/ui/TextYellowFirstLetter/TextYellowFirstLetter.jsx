@@ -5,8 +5,7 @@ const TextYellowFirstLetter = ({ text }) => {
   const letters = text.split('');
   letters[0] = <span style={{ color: 'var(--color-text-accent)' }}>{letters[0]}</span>;
   return (
-    letters
+    letters.map((letter) => { return <span key={Math.random()}>{letter}</span>; })
   );
 };
-
 export default TextYellowFirstLetter;
