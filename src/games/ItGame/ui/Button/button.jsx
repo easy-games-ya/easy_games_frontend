@@ -1,15 +1,12 @@
 import React from 'react';
-import './button.css';
-import TextYellowFirstLetter from '../TextYellowFirstLetter/TextYellowFirstLetter';
+import './Button.css';
 
-const Button = ({ isSubmit, isDisabled, text }) => {
+const Button = ({
+  children, className = '', onClick = () => {}, isSubmit, isDisabled,
+}) => {
   return (
-    <button
-      className='button'
-      type={isSubmit ? 'submit' : 'button'}
-      disabled={isDisabled}
-    >
-      {TextYellowFirstLetter({ text })}
+    <button className={`button ${className}`} type={isSubmit ? 'submit' : 'button'} onClick={onClick} disabled={isDisabled}>
+      {children}
     </button>
   );
 };

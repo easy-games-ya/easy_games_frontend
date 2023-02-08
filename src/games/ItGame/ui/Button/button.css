@@ -1,0 +1,22 @@
+.button {
+  width: 250px;
+  margin: 0;
+  padding: 17.5px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 600;
+  color: var(--color-text-base);
+  background-color: #7B44A6;
+  border: none;
+  border-radius: 15px;
+  transition-duration: .5s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: black;
+}
+
+.button:focus {
+  color: var(--color-text-accent);
+}
