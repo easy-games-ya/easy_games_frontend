@@ -9,6 +9,7 @@
   font-size: 60px;
   line-height: 73px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .answer__image {

@@ -1,7 +1,8 @@
 import React from 'react';
 import './FinalPage.css';
 import Header from '../../components/Header/Header';
-import finalEmoji from '../../../../images/it-game_final.svg';
+import TextYellowFirstLetter from '../../ui/TextYellowFirstLetter/TextYellowFirstLetter';
+import finalEmoji from '../../images/it-game_final.svg';
 
 const FinalPage = () => {
   return (
@@ -9,8 +10,7 @@ const FinalPage = () => {
       <Header />
       <main className='main final'>
         <h1 className='final__title'>
-          <span style={{ color: 'var(--color-text-accent)' }}>И</span>
-          гра окончена!
+          <TextYellowFirstLetter text='Игра окончена!' />
         </h1>
         <p className='final__subtitle'>
           Иероним, вы набрали

@@ -12,6 +12,7 @@
   line-height: 49px;
   font-weight: 600;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .question__image {
