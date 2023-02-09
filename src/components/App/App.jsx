@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import ProtectedRoute from '../ProtectedRoute';
 import MainPage from '../../pages/MainPage/MainPage';
@@ -24,6 +24,7 @@ const App = () => {
         <Route path='question/:id' element={<QuestionPageItGame />} />
         <Route path='final' element={<FinalPageItGame />} />
       </Route>
+      <Route path='/easy_games_frontend' element={<Navigate to='/it-game' replace />} />
       <Route path='*' element={<NotFoundPage />} />
     </Routes>
   );
