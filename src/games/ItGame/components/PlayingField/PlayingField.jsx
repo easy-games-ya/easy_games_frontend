@@ -21,7 +21,7 @@ const PlayingField = ({ categoriesList }) => {
               {category.question.map((card, index) => {
                 return (
                   <li className='playing-field__item' key={category.question[index]}>
-                    <PlayingCard id={category.question[index]}>{((index + 1) * 100)}</PlayingCard>
+                    <PlayingCard id={category.question[index]} type='question'>{((index + 1) * 100)}</PlayingCard>
                   </li>
                 );
               })}
