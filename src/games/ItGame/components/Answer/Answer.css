@@ -12,6 +12,10 @@
   text-transform: uppercase;
 }
 
+.answer__text::first-letter {
+  color: var(--color-text-accent);
+}
+
 .answer__image {
   width: 120px;
   height: 120px;

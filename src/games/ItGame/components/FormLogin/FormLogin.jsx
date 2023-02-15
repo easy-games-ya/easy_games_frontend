@@ -1,7 +1,6 @@
 import React from 'react';
 import './FormLogin.css';
 import Button from '../../ui/Button/Button';
-import TextYellowFirstLetter from '../../ui/TextYellowFirstLetter/TextYellowFirstLetter';
 
 const FormLogin = ({ formSubmit, onchange }) => {
   return (
@@ -21,9 +20,7 @@ const FormLogin = ({ formSubmit, onchange }) => {
         </label>
 
       </fieldset>
-      <Button isSubmit>
-        <TextYellowFirstLetter text='Вход' />
-      </Button>
+      <Button isSubmit>Вход</Button>
 
     </form>
   );

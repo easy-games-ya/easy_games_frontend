@@ -39,3 +39,7 @@
   border: none;
   letter-spacing: 0.02em;
 }
+
+.welcome-page__text::first-letter {
+  color: var(--color-text-accent);
+}

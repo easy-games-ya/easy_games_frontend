@@ -16,6 +16,10 @@
   text-transform: uppercase;
 }
 
+.final__title::first-letter {
+  color: var(--color-text-accent);
+}
+
 .final__subtitle {
   margin: 130px auto 130px;
   padding: 0;
