@@ -6,15 +6,19 @@
   line-height: 30px;
   font-weight: 600;
   color: var(--color-text-base);
-  background-color: #7B44A6;
+  background-color: var(--color-background-base);
   border: none;
   border-radius: 15px;
   transition-duration: .5s;
   cursor: pointer;
 }
 
+.button::first-letter {
+  color: var(--color-text-accent);
+}
+
 .button:hover {
-  background-color: black;
+  background-color: var(--color-background-input);
 }
 
 .button:focus {
