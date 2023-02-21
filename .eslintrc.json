@@ -5,7 +5,9 @@
   },
   "extends": [
       "plugin:react/recommended",
-      "airbnb"
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:import/typescript"
   ],
   "overrides": [
   ],
