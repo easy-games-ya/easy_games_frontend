@@ -7,7 +7,8 @@ const ItGame: React.FC = () => {
   const [categoriesList, setCategoriesList] = React.useState([]); // список категорий в игре
 
   React.useEffect(() => {
-    getCards('testuser', 'i113R56qV', setCategoriesList);
+    getCards({ user: 'testuser', pass: 'i113R56qV' })
+      .then((res) => {setCategoriesList(res);});
   }, []);
 
   return (
