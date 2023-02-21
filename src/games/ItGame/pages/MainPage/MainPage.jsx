@@ -1,16 +1,12 @@
 import React from 'react';
+import { useOutletContext } from 'react-router-dom';
 
 import Header from '../../components/Header/Header';
 import PlayingField from '../../components/PlayingField/PlayingField';
 import InfoSection from '../../components/InfoSection/InfoSection';
-import getCards from '../../api/MainApi';
 
 const MainPage = () => {
-  const [categoriesList, setCategoriesList] = React.useState([]); // список категорий в игре
-
-  React.useEffect(() => {
-    getCards('testuser', 'i113R56qV', setCategoriesList);
-  }, []);
+  const { categoriesList } = useOutletContext();
 
   return (
     <div className='page'>
