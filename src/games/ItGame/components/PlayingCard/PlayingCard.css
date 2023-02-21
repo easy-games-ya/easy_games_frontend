@@ -10,7 +10,7 @@
   justify-content: center;
   color: var( --color-text-addtional);
   text-decoration: none;
-  background-color: #fff;
+  background-color: var(--color-background-additional);
   border-radius: 15px;
   transition-duration: .7s;
   cursor: pointer;

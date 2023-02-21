@@ -46,7 +46,9 @@
       "jsx-a11y/anchor-is-valid": "off",
       "import/no-extraneous-dependencies": "off",
       "react/jsx-props-no-spreading": "off",
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+      "class-methods-use-this": "warn",
+      "prefer-promise-reject-errors": "warn"
   },
   "settings": {
     "import/resolver": {

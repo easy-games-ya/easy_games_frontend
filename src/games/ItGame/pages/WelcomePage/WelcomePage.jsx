@@ -3,7 +3,6 @@ import './WelcomePage.css';
 import FormLogin from '../../components/FormLogin/FormLogin';
 import itGameBigLogo from '../../../../images/it-game_big-logo.svg';
 import ModalRules from '../../components/ModalRules/ModalRules';
-import TextYellowFirstLetter from '../../ui/TextYellowFirstLetter/TextYellowFirstLetter';
 
 const WelcomePage = () => {
   const [openRules, setOpenRules] = useState(false);
@@ -44,9 +43,7 @@ const WelcomePage = () => {
           {openRules ? <ModalRules closeRules={closedRules} /> : null}
         </div>
 
-        <button className='welcome-page__text' type='button' onClick={openedRules}>
-          <TextYellowFirstLetter text='Правила' />
-        </button>
+        <button className='welcome-page__text' type='button' onClick={openedRules}>Правила</button>
 
       </div>
     </div>

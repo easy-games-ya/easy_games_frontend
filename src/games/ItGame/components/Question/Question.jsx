@@ -1,7 +1,6 @@
 import React from 'react';
 import './Question.css';
 import Button from '../../ui/Button/Button';
-import TextYellowFirstLetter from '../../ui/TextYellowFirstLetter/TextYellowFirstLetter';
 
 const Question = ({ image, question, answerOpened }) => {
   const handleSubmit = (e) => {
@@ -17,16 +16,12 @@ const Question = ({ image, question, answerOpened }) => {
       {
         question
       && (
-        <p className='question__text'>
-          <TextYellowFirstLetter text={question} />
-        </p>
+        <p className='question__text'>{question}</p>
       )
       }
       <form className='question__form'>
         <input className='question__input' />
-        <Button isSubmit onClick={handleSubmit}>
-          <TextYellowFirstLetter text='Ответить' />
-        </Button>
+        <Button isSubmit onClick={handleSubmit}>Ответить</Button>
       </form>
       <p className='question__time'>00:22</p>
     </main>
