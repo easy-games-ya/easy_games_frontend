@@ -5,13 +5,13 @@ import ProtectedRoute from '../ProtectedRoute';
 import MainPage from '../../pages/MainPage/MainPage';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 
-import ItGame from '../../games/ItGame';
+import ItGame from '../../games/ItGame/ItGame';
 import {
   MainPageItGame,
   WelcomePageItGame,
   QuestionPageItGame,
   FinalPageItGame,
-} from '../../games/ItGame/pages';
+} from '../../games/ItGame/pages/pages';
 
 const App = () => {
   // eslint-disable-next-line no-unused-vars

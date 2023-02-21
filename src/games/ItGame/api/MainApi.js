@@ -1,10 +1,12 @@
 import axios from 'axios';
-import { baseUrl, apiHeaders } from '../utils/constants';
+import { baseUrl } from '../utils/constants';
 
 const getCards = async (user, pass, fun) => {
   try {
     const response = await axios.get(`${baseUrl}/category/`, {
-      headers: apiHeaders,
+      headers: {
+        'Content-Type': ['application/json', 'text/plain', '*/*'],
+      },
       auth: {
         username: user,
         password: pass,

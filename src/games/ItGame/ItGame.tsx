@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import './ItGame.css';
 import getCards from './api/MainApi';
 
-const ItGame = () => {
+const ItGame: React.FC = () => {
   const [categoriesList, setCategoriesList] = React.useState([]); // список категорий в игре
 
   React.useEffect(() => {
