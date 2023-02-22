@@ -1,12 +1,13 @@
 import React from 'react';
 import { useOutletContext } from 'react-router-dom';
+import { useCategories } from '../../ItGame';
 
 import Header from '../../components/Header/Header';
 import PlayingField from '../../components/PlayingField/PlayingField';
 import InfoSection from '../../components/InfoSection/InfoSection';
 
-const MainPage = () => {
-  const { categoriesList } = useOutletContext();
+const MainPage: React.FC = () => {
+  const { categoriesList } = useCategories();
 
   return (
     <div className='page'>
