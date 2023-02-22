@@ -8,7 +8,7 @@ import avatar from '../../../../images/it-game_avatar.svg';
 const InfoSection = () => {
   const [recordsList, setRecordsList] = React.useState<Array<IRecordCard> | null>([]); // список рекордов для этой игры
 
-  const infoFromBackend: Array<IRecordCard> = [
+  const infoFromBackend: IRecordCard[] = [
     {
       id: '1',
       name: 'Леонардо',
