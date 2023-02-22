@@ -1,5 +1,4 @@
 import React from 'react';
-import { useOutletContext } from 'react-router-dom';
 import { useCategories } from '../../ItGame';
 
 import Header from '../../components/Header/Header';

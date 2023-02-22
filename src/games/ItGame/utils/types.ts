@@ -11,3 +11,9 @@ export interface IResponseSuccess {
   status: number,
   statusText: string,
 };
+
+export interface IRecordCard {
+  id: string,
+  name: string,
+  score: string,
+};
