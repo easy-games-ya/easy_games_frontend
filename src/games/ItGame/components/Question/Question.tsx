@@ -2,8 +2,14 @@ import React from 'react';
 import './Question.css';
 import Button from '../../ui/Button/Button';
 
-const Question = ({ image, question, answerOpened }) => {
-  const handleSubmit = (e) => {
+interface QuestionProps {
+  image?: string,
+  text?: string,
+  answerOpened: boolean,
+}
+
+const Question: React.FC<QuestionProps> = ({ image, text, answerOpened }) => {
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>): void => {
     e.preventDefault();
   };
 
@@ -14,14 +20,14 @@ const Question = ({ image, question, answerOpened }) => {
       && <img className='question__image' src={image} alt='изображение' />
       }
       {
-        question
+        text
       && (
-        <p className='question__text'>{question}</p>
+        <p className='question__text'>{text}</p>
       )
       }
       <form className='question__form'>
         <input className='question__input' />
-        <Button isSubmit onClick={handleSubmit}>Ответить</Button>
+        <Button isSubmit onClick={() => {handleSubmit;}} isDisabled={false}>Ответить</Button>
       </form>
       <p className='question__time'>00:22</p>
     </main>
