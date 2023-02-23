@@ -11,3 +11,10 @@ export interface IResponseSuccess {
   status: number,
   statusText: string,
 };
+
+export interface IResponseCard {
+  description: string,
+  id: string,
+  question: string[],
+  title: string,
+};

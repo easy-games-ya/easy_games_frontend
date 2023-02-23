@@ -1,16 +1,17 @@
 import React from 'react';
 import './PlayingField.css';
 import PlayingCard, { PlayingCardVariant } from '../PlayingCard/PlayingCard';
+import { IResponseCard } from '../../utils/types';
 
 interface PlayingFieldProps {
-  categoriesList: [] | null,
+  categoriesList: IResponseCard[] | null,
 }
 
 const PlayingField: React.FC<PlayingFieldProps> = ({ categoriesList }) => {
   return (
     <section className='playing-field'>
       <ul className='playing-field__themes'>
-        {categoriesList && categoriesList.map((card: { id: string, title: string }) => {
+        {categoriesList && categoriesList.map((card) => {
           return (
             <li className='playing-field__item' key={card.id}>
               <PlayingCard id={card.id} type={PlayingCardVariant.category}>{card.title}</PlayingCard>
@@ -19,7 +20,7 @@ const PlayingField: React.FC<PlayingFieldProps> = ({ categoriesList }) => {
         })}
       </ul>
       <ul className='playing-field__questions'>
-        {categoriesList && categoriesList.map((category: { id: string, question: [] }) => {
+        {categoriesList && categoriesList.map((category: { id: string, question: string[] }) => {
           return (
             <ul className='playing-field__questions' key={category.id}>
               {category.question.map((card, index) => {

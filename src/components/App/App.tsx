@@ -15,7 +15,7 @@ import {
 
 const App = () => {
   // eslint-disable-next-line no-unused-vars
-  const [loggedIn, setLoggedIn] = React.useState(true); // пользователь вошёл в учётную запись?
+  const [loggedIn, setLoggedIn] = React.useState<boolean>(true); // пользователь вошёл в учётную запись?
 
   return (
     <Routes>
