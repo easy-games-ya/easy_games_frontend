@@ -6,11 +6,19 @@ interface QuestionProps {
   image?: string,
   question?: string,
   answerOpened: boolean,
+  answerTheQuestion: (inputText: string) => void,
 }
 
-const Question: React.FC<QuestionProps> = ({ image, question, answerOpened }) => {
-  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>): void => {
+const Question: React.FC<QuestionProps> = ({ image, question, answerOpened, answerTheQuestion }) => {
+  const [inputText, setInputText] = React.useState<string>('');
+
+  const handleAnswerInput = (e: React.ChangeEvent<HTMLInputElement>):void => {
+    setInputText(e.target.value);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
+    answerTheQuestion(inputText);
   };
 
   return (
@@ -25,9 +33,9 @@ const Question: React.FC<QuestionProps> = ({ image, question, answerOpened }) =>
         <p className='question__text'>{question}</p>
       )
       }
-      <form className='question__form'>
-        <input className='question__input' />
-        <Button isSubmit onClick={() => {handleSubmit;}} isDisabled={false}>Ответить</Button>
+      <form className='question__form' onSubmit={handleSubmit}>
+        <input className='question__input' type='text' name='answer' value={inputText} onChange={handleAnswerInput} />
+        <Button isSubmit isDisabled={false}>Ответить</Button>
       </form>
       <p className='question__time'>00:22</p>
     </main>

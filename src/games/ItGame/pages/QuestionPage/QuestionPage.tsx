@@ -17,11 +17,16 @@ export interface IQuestion {
 
 const QuestionPage: React.FC = () => {
   const { id } = useParams(); // id вопроса, получаемый из url-адреса текущей страницы
-  const [question, setQuestion] = React.useState<IQuestion | null>({ id: '', answer: '', score: 0 }); // информация о вопросе
-  // eslint-disable-next-line no-unused-vars
+  const [question, setQuestion] = React.useState<IQuestion>({ id: '', answer: '', score: 0 }); // информация о вопросе
   const [answerOpened, setAnswerOpened] = React.useState<boolean>(false); // открыт модуль с ответом?
-  // eslint-disable-next-line no-unused-vars
   const [isCorrectAnser, setIsCorrectAnser] = React.useState<boolean>(true); // ответ правильный?
+
+  const answerTheQuestion = (inputText: string) => {
+    if (question?.answer) {
+      setAnswerOpened(true);
+      setIsCorrectAnser(question.answer === inputText);
+    };
+  };
 
   React.useEffect(() => {
     if (question) {
@@ -33,8 +38,8 @@ const QuestionPage: React.FC = () => {
   return (
     <div className='page'>
       <Header />
-      {question && <Question image={question.image} question={question.question} answerOpened={answerOpened} />}
-      {question && <Answer answerOpened={answerOpened} isCorrectAnser={isCorrectAnser} />}
+      {question && <Question image={question.image} question={question.question} answerOpened={answerOpened} answerTheQuestion={answerTheQuestion} />}
+      {question && <Answer answerOpened={answerOpened} isCorrectAnser={isCorrectAnser} answer={question.answer} />}
     </div>
   );
 };
