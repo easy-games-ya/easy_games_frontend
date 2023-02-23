@@ -1,6 +1,6 @@
 import React from 'react';
 import './PlayingField.css';
-import PlayingCard from '../PlayingCard/PlayingCard';
+import PlayingCard, { PlayingCardVariant } from '../PlayingCard/PlayingCard';
 
 interface PlayingFieldProps {
   categoriesList: [] | null,
@@ -13,7 +13,7 @@ const PlayingField: React.FC<PlayingFieldProps> = ({ categoriesList }) => {
         {categoriesList && categoriesList.map((card: { id: string, title: string }) => {
           return (
             <li className='playing-field__item' key={card.id}>
-              <PlayingCard id={card.id} type={undefined}>{card.title}</PlayingCard>
+              <PlayingCard id={card.id} type={PlayingCardVariant.category}>{card.title}</PlayingCard>
             </li>
           );
         })}
@@ -25,7 +25,7 @@ const PlayingField: React.FC<PlayingFieldProps> = ({ categoriesList }) => {
               {category.question.map((card, index) => {
                 return (
                   <li className='playing-field__item' key={category.question[index]}>
-                    <PlayingCard id={category.question[index]} type='question'>{((index + 1) * 100)}</PlayingCard>
+                    <PlayingCard id={category.question[index]} type={PlayingCardVariant.question}>{((index + 1) * 100)}</PlayingCard>
                   </li>
                 );
               })}
