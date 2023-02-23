@@ -11,10 +11,7 @@ const ItGame: React.FC = () => {
 
   React.useEffect(() => {
     getCards({ user: 'testuser', pass: 'i113R56qV' })
-      .then((res) => {
-        console.log(res);
-        setCategoriesList(res);
-      });
+      .then((res) => {setCategoriesList(res);});
   }, []);
 
   return (
