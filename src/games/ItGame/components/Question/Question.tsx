@@ -4,11 +4,11 @@ import Button from '../../ui/Button/Button';
 
 interface QuestionProps {
   image?: string,
-  text?: string,
+  question?: string,
   answerOpened: boolean,
 }
 
-const Question: React.FC<QuestionProps> = ({ image, text, answerOpened }) => {
+const Question: React.FC<QuestionProps> = ({ image, question, answerOpened }) => {
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>): void => {
     e.preventDefault();
   };
@@ -20,9 +20,9 @@ const Question: React.FC<QuestionProps> = ({ image, text, answerOpened }) => {
       && <img className='question__image' src={image} alt='изображение' />
       }
       {
-        text
+        question
       && (
-        <p className='question__text'>{text}</p>
+        <p className='question__text'>{question}</p>
       )
       }
       <form className='question__form'>

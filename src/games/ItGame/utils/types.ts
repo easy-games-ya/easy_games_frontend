@@ -5,7 +5,7 @@ export interface IUserPass {
 
 export interface IResponseSuccess {
   config: {},
-  data: [],
+  data: {},
   headers: {},
   request: {},
   status: number,

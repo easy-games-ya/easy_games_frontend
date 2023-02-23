@@ -4,17 +4,20 @@ import { useParams } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Question from '../../components/Question/Question';
 import Answer from '../../components/Answer/Answer';
-import questionImage from '../../../../images/it-game_image.jpg';
+import getQuestionById from '../../api/QuestionApi';
 
-interface IQuestion {
-  id: number,
+export interface IQuestion {
+  id: string,
+  question?: string,
+  answer: string,
   image?: string,
-  text?: string,
+  category?: string,
+  score: number,
 };
 
 const QuestionPage: React.FC = () => {
   const { id } = useParams(); // id вопроса, получаемый из url-адреса текущей страницы
-  const [question, setQuestion] = React.useState<IQuestion | null>({ id: 5 }); // информация о вопросе
+  const [question, setQuestion] = React.useState<IQuestion | null>({ id: '', answer: '', score: 0 }); // информация о вопросе
   // eslint-disable-next-line no-unused-vars
   const [answerOpened, setAnswerOpened] = React.useState<boolean>(false); // открыт модуль с ответом?
   // eslint-disable-next-line no-unused-vars
@@ -22,27 +25,15 @@ const QuestionPage: React.FC = () => {
 
   React.useEffect(() => {
     if (question) {
-      if (question.id % 2 === 1) {
-        setQuestion({ // будет запрашиваться с бэкенда
-          id: 1,
-          text: `В 2011 году на спектакле в лондонском театре Barbican зрителям вместо кресел предлагались кровати,
-        а завершалась программа утренним завтраком.
-        Как назывался спектакль?`,
-        });
-      };
-      if (question.id % 2 === 0) {
-        setQuestion({ // будет запрашиваться с бэкенда
-          id: 1,
-          image: questionImage,
-        });
-      };
+      getQuestionById({ username: 'testuser', password: 'i113R56qV' }, id!)
+        .then((res) => {setQuestion(res);});
     }
   }, [id]);
 
   return (
     <div className='page'>
       <Header />
-      {question && <Question image={question.image} text={question.text} answerOpened={answerOpened} />}
+      {question && <Question image={question.image} question={question.question} answerOpened={answerOpened} />}
       {question && <Answer answerOpened={answerOpened} isCorrectAnser={isCorrectAnser} />}
     </div>
   );
