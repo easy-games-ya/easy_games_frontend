@@ -8,10 +8,7 @@ const getCards = async (req: IUserPass) => {
       headers: {
         'Content-Type': ['application/json', 'text/plain', '*/*'],
       },
-      auth: {
-        username: req.user,
-        password: req.pass,
-      },
+      auth: req,
     });
     return response.data;
   } catch (err) {

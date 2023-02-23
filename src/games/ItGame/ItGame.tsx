@@ -10,7 +10,7 @@ const ItGame: React.FC = () => {
   const [categoriesList, setCategoriesList] = React.useState<Array<IResponseCard> | null>([]); // список категорий в игре
 
   React.useEffect(() => {
-    getCards({ user: 'testuser', pass: 'i113R56qV' })
+    getCards({ username: 'testuser', password: 'i113R56qV' })
       .then((res) => {setCategoriesList(res);});
   }, []);
 

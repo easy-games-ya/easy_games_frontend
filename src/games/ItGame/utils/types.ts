@@ -1,6 +1,6 @@
 export interface IUserPass {
-  user: string,
-  pass: string,
+  username: string,
+  password: string,
 };
 
 export interface IResponseSuccess {
