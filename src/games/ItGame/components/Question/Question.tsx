@@ -1,6 +1,7 @@
 import React from 'react';
 import './Question.css';
 import Button from '../../ui/Button/Button';
+import { ButtonType } from '../../utils/enums';
 
 interface QuestionProps {
   image?: string,
@@ -35,7 +36,7 @@ const Question: React.FC<QuestionProps> = ({ image, question, answerOpened, answ
       }
       <form className='question__form' onSubmit={handleSubmit}>
         <input className='question__input' type='text' name='answer' value={inputText} onChange={handleAnswerInput} />
-        <Button isSubmit isDisabled={false}>Ответить</Button>
+        <Button type={ButtonType.SUBMIT} isDisabled={false}>Ответить</Button>
       </form>
       <p className='question__time'>00:22</p>
     </main>

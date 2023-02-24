@@ -1,20 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './PlayingCard.css';
-
-export enum PlayingCardVariant {
-  question,
-  category,
-}
+import { PlayingCardType } from '../../utils/enums';
 
 export interface PlayingCardProps {
   id: string,
-  type: PlayingCardVariant,
+  type: PlayingCardType,
   children: React.ReactNode,
 }
 
 const PlayingCard: React.FC<PlayingCardProps> = ({ id, type, children }) => {
-  return ((type === PlayingCardVariant.question)
+  return ((type === PlayingCardType.QUESTION)
     ? (
       <Link className='playing-card' to={`question/${id}`}>{children}</Link>
     )

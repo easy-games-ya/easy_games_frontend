@@ -1,7 +1,8 @@
 import React from 'react';
 import './PlayingField.css';
-import PlayingCard, { PlayingCardVariant } from '../PlayingCard/PlayingCard';
+import PlayingCard from '../PlayingCard/PlayingCard';
 import { IResponseCard } from '../../utils/types';
+import { PlayingCardType } from '../../utils/enums';
 
 interface PlayingFieldProps {
   categoriesList: IResponseCard[] | null,
@@ -14,7 +15,7 @@ const PlayingField: React.FC<PlayingFieldProps> = ({ categoriesList }) => {
         {categoriesList && categoriesList.map((card) => {
           return (
             <li className='playing-field__item' key={card.id}>
-              <PlayingCard id={card.id} type={PlayingCardVariant.category}>{card.title}</PlayingCard>
+              <PlayingCard id={card.id} type={PlayingCardType.CATEGORY}>{card.title}</PlayingCard>
             </li>
           );
         })}
@@ -26,7 +27,7 @@ const PlayingField: React.FC<PlayingFieldProps> = ({ categoriesList }) => {
               {category.question.map((card, index) => {
                 return (
                   <li className='playing-field__item' key={category.question[index]}>
-                    <PlayingCard id={category.question[index]} type={PlayingCardVariant.question}>{((index + 1) * 100)}</PlayingCard>
+                    <PlayingCard id={category.question[index]} type={PlayingCardType.QUESTION}>{((index + 1) * 100)}</PlayingCard>
                   </li>
                 );
               })}
