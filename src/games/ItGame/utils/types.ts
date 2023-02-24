@@ -5,7 +5,7 @@ export interface IUserPass {
 
 export interface IResponseSuccess {
   config: {},
-  data: [],
+  data: {},
   headers: {},
   request: {},
   status: number,
@@ -17,4 +17,13 @@ export interface IResponseCard {
   id: string,
   question: string[],
   title: string,
+};
+
+export interface IQuestion {
+  id: string,
+  question?: string,
+  answer: string,
+  image?: string,
+  category?: string,
+  score: number,
 };
