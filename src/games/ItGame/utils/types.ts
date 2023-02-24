@@ -18,3 +18,12 @@ export interface IResponseCard {
   question: string[],
   title: string,
 };
+
+export interface IQuestion {
+  id: string,
+  question?: string,
+  answer: string,
+  image?: string,
+  category?: string,
+  score: number,
+};

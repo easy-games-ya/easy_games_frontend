@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { baseUrl } from '../utils/constants';
-import { IUserPass, IResponseSuccess } from '../utils/types';
-import { IQuestion } from '../pages/QuestionPage/QuestionPage';
+import { IUserPass, IResponseSuccess, IQuestion } from '../utils/types';
 
 const getQuestionById = async (req: IUserPass, id: string) => {
   try {

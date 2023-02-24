@@ -1,19 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
 import Header from '../../components/Header/Header';
 import Question from '../../components/Question/Question';
 import Answer from '../../components/Answer/Answer';
 import getQuestionById from '../../api/QuestionApi';
-
-export interface IQuestion {
-  id: string,
-  question?: string,
-  answer: string,
-  image?: string,
-  category?: string,
-  score: number,
-};
+import { IQuestion } from '../../utils/types';
 
 const QuestionPage: React.FC = () => {
   const { id } = useParams(); // id вопроса, получаемый из url-адреса текущей страницы
@@ -21,7 +12,7 @@ const QuestionPage: React.FC = () => {
   const [answerOpened, setAnswerOpened] = React.useState<boolean>(false); // открыт модуль с ответом?
   const [isCorrectAnser, setIsCorrectAnser] = React.useState<boolean>(true); // ответ правильный?
 
-  const answerTheQuestion = (inputText: string) => {
+  const answerTheQuestion = (inputText: string): void => {
     if (question?.answer) {
       setAnswerOpened(true);
       setIsCorrectAnser(question.answer === inputText);
@@ -32,7 +23,7 @@ const QuestionPage: React.FC = () => {
     if (question) {
       getQuestionById({ username: 'testuser', password: 'i113R56qV' }, id!)
         .then((res) => {setQuestion(res);});
-    }
+    };
   }, [id]);
 
   return (
