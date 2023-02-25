@@ -13,7 +13,7 @@ const QuestionPage: FC = () => {
   const [isCorrectAnser, setIsCorrectAnser] = useState<boolean>(true); // ответ правильный?
 
   const handleAnswerTheQuestion = (inputText: string): void => {
-    if (question?.answer) {
+    if (question.answer) {
       setAnswerOpened(true);
       setIsCorrectAnser(question.answer === inputText);
     };
@@ -23,7 +23,7 @@ const QuestionPage: FC = () => {
     if (question) {
       itGameApi
         .getQuestionById({ username: 'testuser', password: 'i113R56qV' }, id!)
-        .then((res) => {setQuestion(res);});
+        .then((res) => { setQuestion(res); });
     };
   }, [id]);
 

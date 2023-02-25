@@ -4,17 +4,17 @@ import { IUserPass, IResponseSuccess, IQuestion } from '../utils/types';
 
 interface ItGameApiArguments {
   _baseUrl: string,
-  _headers: { 'Content-Type': string[]; },
+  _headers: { 'Content-Type': string[] },
 }
 
 class ItGameApi {
   _baseUrl: string;
-  _headers: { 'Content-Type': string[]; };
+  _headers: { 'Content-Type': string[] };
 
   constructor({ _baseUrl, _headers }: ItGameApiArguments ) {
     this._baseUrl = _baseUrl;
     this._headers = _headers;
-  };
+  }
 
   getCards = async (req: IUserPass): Promise<[]> => {
     try {
@@ -39,7 +39,7 @@ class ItGameApi {
       throw new Error(`Ошибка ${err}`);
     };
   };
-}
+};
 
 const itGameApi = new ItGameApi({
   _baseUrl: baseUrl,

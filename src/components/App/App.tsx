@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import ProtectedRoute from '../ProtectedRoute';
@@ -14,12 +14,11 @@ import {
 } from '../../games/ItGame/pages/pages';
 
 const App = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [loggedIn, setLoggedIn] = React.useState<boolean>(true); // пользователь вошёл в учётную запись?
+  const [loggedIn, setLoggedIn] = useState<boolean>(true); // пользователь вошёл в учётную запись?
 
   return (
     <Routes>
-      <Route path='/' element={<MainPage />} />
+      <Route path='/' element={<MainPage loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
       <Route path='/it-game' element={<ItGame />}>
         <Route path='' element={<ProtectedRoute loggedIn={loggedIn} component={MainPageItGame} link='welcome' />} />
         <Route path='welcome' element={<ProtectedRoute loggedIn={!loggedIn} component={WelcomePageItGame} link='/it-game' />} />
