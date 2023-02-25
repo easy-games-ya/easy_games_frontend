@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Question from '../../components/Question/Question';
 import Answer from '../../components/Answer/Answer';
-import getQuestionById from '../../api/QuestionApi';
+import itGameApi from '../../api/itGameApi';
 import { IQuestion } from '../../utils/types';
 
 const QuestionPage: FC = () => {
@@ -21,7 +21,8 @@ const QuestionPage: FC = () => {
 
   useEffect(() => {
     if (question) {
-      getQuestionById({ username: 'testuser', password: 'i113R56qV' }, id!)
+      itGameApi
+        .getQuestionById({ username: 'testuser', password: 'i113R56qV' }, id!)
         .then((res) => {setQuestion(res);});
     };
   }, [id]);
@@ -29,8 +30,8 @@ const QuestionPage: FC = () => {
   return (
     <div className='page'>
       <Header />
-      {question && <Question image={question.image} question={question.question} answerOpened={answerOpened} handleAnswerTheQuestion={handleAnswerTheQuestion} />}
-      {question && <Answer answerOpened={answerOpened} isCorrectAnser={isCorrectAnser} answer={question.answer} />}
+      {<Question image={question.image} question={question.question} answerOpened={answerOpened} handleAnswerTheQuestion={handleAnswerTheQuestion} />}
+      {<Answer answerOpened={answerOpened} isCorrectAnser={isCorrectAnser} answer={question.answer} />}
     </div>
   );
 };
