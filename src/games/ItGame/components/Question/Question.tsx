@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, useState, ChangeEvent, FormEvent } from 'react';
 import './Question.css';
 import Button from '../../ui/Button/Button';
 import { ButtonType, InputType } from '../../utils/enums';
@@ -8,19 +8,19 @@ interface QuestionProps {
   image?: string,
   question?: string,
   answerOpened: boolean,
-  answerTheQuestion: (inputText: string) => void,
+  handleAnswerTheQuestion: (inputText: string) => void,
 }
 
-const Question: React.FC<QuestionProps> = ({ image, question, answerOpened, answerTheQuestion }) => {
-  const [inputText, setInputText] = React.useState<string>('');
+const Question: FC<QuestionProps> = ({ image, question, answerOpened, handleAnswerTheQuestion }) => {
+  const [inputText, setInputText] = useState<string>('');
 
-  const handleAnswerInput = (e: React.ChangeEvent<HTMLInputElement>):void => {
+  const handleAnswerInput = (e: ChangeEvent<HTMLInputElement>):void => {
     setInputText(e.target.value);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    answerTheQuestion(inputText);
+    handleAnswerTheQuestion(inputText);
   };
 
   return (

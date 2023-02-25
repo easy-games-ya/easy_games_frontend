@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './ProfileCard.css';
 
-const ProfileCard = ({ name, avatar, score }) => {
+interface ProfileCardProps {
+  name: string,
+  avatar: string,
+  score: number,
+}
+
+const ProfileCard: FC<ProfileCardProps> = ({ name, avatar, score }) => {
   return (
     <div className='profile-card'>
       <img className='profile-card__avatar' src={avatar} alt={name} />

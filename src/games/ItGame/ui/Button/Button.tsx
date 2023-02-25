@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, ReactNode } from 'react';
 import { ButtonType } from '../../utils/enums';
 import './Button.css';
 
@@ -7,10 +7,10 @@ interface ButtonProps {
   onClick?: () => {},
   isDisabled?: boolean,
   type: ButtonType,
-  children: React.ReactNode,
+  children: ReactNode,
 }
 
-const Button: React.FC<ButtonProps> = ({
+const Button: FC<ButtonProps> = ({
   className = '', onClick = () => {}, isDisabled = true, type, children,
 }) => {
   return (

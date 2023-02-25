@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import './InfoSection.css';
 import ProfileCard from '../ProfileCard/ProfileCard';
 import RecordCard, { RecordCardProps } from '../RecordCard/RecordCard';
 import avatar from '../../../../images/it-game_avatar.svg';
 
-const InfoSection = () => {
-  const [recordsList, setRecordsList] = React.useState<Array<RecordCardProps>>([]); // список рекордов для этой игры
+const InfoSection: FC = () => {
+  const [recordsList, setRecordsList] = useState<Array<RecordCardProps>>([]); // список рекордов для этой игры
 
   const infoFromBackend: RecordCardProps[] = [
     {
@@ -25,13 +25,13 @@ const InfoSection = () => {
     },
   ];
 
-  React.useEffect(() => {
+  useEffect(() => {
     setRecordsList(infoFromBackend);
   }, []);
 
   return (
     <section className='info-section'>
-      <ProfileCard name='Иероним' avatar={avatar} score='1250' />
+      <ProfileCard name='Иероним' avatar={avatar} score={1250} />
       <div className='info-section__records'>
         <p className='info-section__records-caption'>Лучшие результаты</p>
         <ul className='info-section__records-row'>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './PlayingField.css';
 import PlayingCard from '../PlayingCard/PlayingCard';
 import { IResponseCard } from '../../utils/types';
@@ -8,7 +8,7 @@ interface PlayingFieldProps {
   categoriesList: IResponseCard[],
 }
 
-const PlayingField: React.FC<PlayingFieldProps> = ({ categoriesList }) => {
+const PlayingField: FC<PlayingFieldProps> = ({ categoriesList }) => {
   return (
     <section className='playing-field'>
       <ul className='playing-field__themes'>

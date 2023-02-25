@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './RecordCard.css';
 
 export interface RecordCardProps {
@@ -7,7 +7,7 @@ export interface RecordCardProps {
   score: number,
 };
 
-const RecordCard: React.FC<RecordCardProps> = ({ id, name, score }) => {
+const RecordCard: FC<RecordCardProps> = ({ id, name, score }) => {
   return (
     <li className='record-card' key={id}>
       <p className='record-card__name'>{name}</p>

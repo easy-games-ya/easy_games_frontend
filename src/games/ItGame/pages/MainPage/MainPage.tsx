@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useCategories } from '../../ItGame';
 import Header from '../../components/Header/Header';
 import PlayingField from '../../components/PlayingField/PlayingField';
 import InfoSection from '../../components/InfoSection/InfoSection';
 
-const MainPage: React.FC = () => {
+const MainPage: FC = () => {
   const { categoriesList } = useCategories();
 
   return (

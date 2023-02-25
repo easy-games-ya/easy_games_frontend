@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, ChangeEvent } from 'react';
 import { InputType } from '../../utils/enums';
 import './Input.css';
 
@@ -7,10 +7,10 @@ interface InputProps {
   type: InputType,
   name: string,
   value: string,
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void,
 }
 
-const Input: React.FC<InputProps> = ({
+const Input: FC<InputProps> = ({
   className, type, name, value, onChange,
 }) => {
   return (
