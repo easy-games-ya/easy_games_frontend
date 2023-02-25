@@ -21,6 +21,6 @@ const ItGame: FC = () => {
 
 export default ItGame;
 
-export function useCategories() {
+export const useCategories = () => {
   return useOutletContext<ContextType>();
 };
