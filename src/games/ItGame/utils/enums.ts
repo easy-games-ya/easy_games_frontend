@@ -8,3 +8,7 @@ export enum ButtonType {
   SUBMIT = 'submit',
   RESET = 'reset',
 }
+
+export enum InputType {
+  TEXT = 'text',
+}
