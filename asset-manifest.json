@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/easy_games_frontend/static/css/main.f3baa812.css",
-    "main.js": "/easy_games_frontend/static/js/main.61909b26.js",
+    "main.css": "/easy_games_frontend/static/css/main.ec2f2a61.css",
+    "main.js": "/easy_games_frontend/static/js/main.e7e878c7.js",
     "static/js/787.4c07c755.chunk.js": "/easy_games_frontend/static/js/787.4c07c755.chunk.js",
-    "static/media/it-game_image.jpg": "/easy_games_frontend/static/media/it-game_image.8a76fb8e4b9d3b34c9d8.jpg",
     "static/media/Montserrat-SemiBold.ttf": "/easy_games_frontend/static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
     "static/media/Montserrat-Medium.ttf": "/easy_games_frontend/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
     "static/media/Montserrat-Bold.ttf": "/easy_games_frontend/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
@@ -14,12 +13,12 @@
     "static/media/it-game_logo.svg": "/easy_games_frontend/static/media/it-game_logo.e09342e5e08a7d1de5487b205c9da66f.svg",
     "static/media/it-game_big-logo.svg": "/easy_games_frontend/static/media/it-game_big-logo.70f5bdd93bce7174840a45e3cd4d40b6.svg",
     "index.html": "/easy_games_frontend/index.html",
-    "main.f3baa812.css.map": "/easy_games_frontend/static/css/main.f3baa812.css.map",
-    "main.61909b26.js.map": "/easy_games_frontend/static/js/main.61909b26.js.map",
+    "main.ec2f2a61.css.map": "/easy_games_frontend/static/css/main.ec2f2a61.css.map",
+    "main.e7e878c7.js.map": "/easy_games_frontend/static/js/main.e7e878c7.js.map",
     "787.4c07c755.chunk.js.map": "/easy_games_frontend/static/js/787.4c07c755.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3baa812.css",
-    "static/js/main.61909b26.js"
+    "static/css/main.ec2f2a61.css",
+    "static/js/main.e7e878c7.js"
   ]
 }
