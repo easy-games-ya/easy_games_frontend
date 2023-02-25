@@ -5,14 +5,14 @@ import { IResponseCard } from '../../utils/types';
 import { PlayingCardType } from '../../utils/enums';
 
 interface PlayingFieldProps {
-  categoriesList: IResponseCard[] | null,
+  categoriesList: IResponseCard[],
 }
 
 const PlayingField: React.FC<PlayingFieldProps> = ({ categoriesList }) => {
   return (
     <section className='playing-field'>
       <ul className='playing-field__themes'>
-        {categoriesList && categoriesList.map((card) => {
+        {categoriesList.map((card) => {
           return (
             <li className='playing-field__item' key={card.id}>
               <PlayingCard id={card.id} type={PlayingCardType.CATEGORY}>{card.title}</PlayingCard>
@@ -21,7 +21,7 @@ const PlayingField: React.FC<PlayingFieldProps> = ({ categoriesList }) => {
         })}
       </ul>
       <ul className='playing-field__questions'>
-        {categoriesList && categoriesList.map((category: { id: string, question: string[] }) => {
+        {categoriesList.map((category: { id: string, question: string[] }) => {
           return (
             <ul className='playing-field__questions' key={category.id}>
               {category.question.map((card, index) => {

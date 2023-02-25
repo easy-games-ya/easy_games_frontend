@@ -4,10 +4,10 @@ import './ItGame.css';
 import getCards from './api/MainApi';
 import { IResponseCard } from './utils/types';
 
-type ContextType = { categoriesList: IResponseCard[] | null };
+type ContextType = { categoriesList: IResponseCard[]};
 
 const ItGame: React.FC = () => {
-  const [categoriesList, setCategoriesList] = React.useState<Array<IResponseCard> | null>([]); // список категорий в игре
+  const [categoriesList, setCategoriesList] = React.useState<Array<IResponseCard>>([]); // список категорий в игре
 
   React.useEffect(() => {
     getCards({ username: 'testuser', password: 'i113R56qV' })

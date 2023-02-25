@@ -5,7 +5,7 @@ import RecordCard, { RecordCardProps } from '../RecordCard/RecordCard';
 import avatar from '../../../../images/it-game_avatar.svg';
 
 const InfoSection = () => {
-  const [recordsList, setRecordsList] = React.useState<Array<RecordCardProps> | null>([]); // список рекордов для этой игры
+  const [recordsList, setRecordsList] = React.useState<Array<RecordCardProps>>([]); // список рекордов для этой игры
 
   const infoFromBackend: RecordCardProps[] = [
     {
@@ -35,7 +35,7 @@ const InfoSection = () => {
       <div className='info-section__records'>
         <p className='info-section__records-caption'>Лучшие результаты</p>
         <ul className='info-section__records-row'>
-          {recordsList && recordsList.map((card: RecordCardProps) => {
+          {recordsList.map((card: RecordCardProps) => {
             return (
               <RecordCard key={card.id} id={card.id} name={card.name} score={card.score} />
             );
