@@ -2,19 +2,11 @@ import axios from 'axios';
 import { baseUrl } from '../utils/constants';
 import { IUserPass, IResponseSuccess, IQuestion } from '../utils/types';
 
-interface ItGameApiArguments {
-  _baseUrl: string,
-  _headers: { 'Content-Type': string[] },
-}
-
 class ItGameApi {
-  _baseUrl: string;
-  _headers: { 'Content-Type': string[] };
-
-  constructor({ _baseUrl, _headers }: ItGameApiArguments ) {
-    this._baseUrl = _baseUrl;
-    this._headers = _headers;
-  }
+  constructor(
+    public _baseUrl: string,
+    public _headers: { 'Content-Type': string[] },
+  ) { }
 
   getCards = async (req: IUserPass): Promise<[]> => {
     try {
@@ -41,11 +33,11 @@ class ItGameApi {
   };
 };
 
-const itGameApi = new ItGameApi({
-  _baseUrl: baseUrl,
-  _headers: {
+const itGameApi = new ItGameApi(
+  baseUrl,
+  {
     'Content-Type': ['application/json', 'text/plain', '*/*'],
   },
-});
+);
 
 export default itGameApi;
