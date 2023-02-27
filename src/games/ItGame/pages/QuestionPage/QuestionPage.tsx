@@ -13,7 +13,7 @@ const QuestionPage: FC = () => {
   const [isCorrectAnser, setIsCorrectAnser] = useState<boolean>(true); // ответ правильный?
   const [time, setTime] = useState<string>('00:00');
 
-  let sec: number = 5;
+  let sec: number = 30;
   let min: number = 0;
 
   const doAnswerTheQuestion = (inputText: string, isThereTime: boolean): void => {
@@ -29,13 +29,13 @@ const QuestionPage: FC = () => {
         return '0' + min + ':0' + sec;
       } else {
         return '0' + min + ':' + sec;
-      }
+      };
     } else {
       if (sec < 10) {
         return min + ':0' + sec;
       } else {
         return min + ':' + sec;
-      }
+      };
     };
   };
 
@@ -54,7 +54,7 @@ const QuestionPage: FC = () => {
 
   const add = () => {
     tick();
-    !(min == 0 && sec == 0) ? timer(): doAnswerTheQuestion('123', false);
+    !(min == 0 && sec == 0) ? timer(): doAnswerTheQuestion('нет ответа', false);
   };
 
   useEffect(() => {
