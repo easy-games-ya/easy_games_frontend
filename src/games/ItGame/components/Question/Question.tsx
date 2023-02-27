@@ -7,11 +7,12 @@ import Input from '../../ui/Input/Input';
 interface QuestionProps {
   image?: string,
   question?: string,
+  time: string;
   answerOpened: boolean,
-  handleAnswerTheQuestion: (inputText: string) => void,
+  handleAnswerTheQuestion: (inputText: string, isThereTime: boolean) => void,
 }
 
-const Question: FC<QuestionProps> = ({ image, question, answerOpened, handleAnswerTheQuestion }) => {
+const Question: FC<QuestionProps> = ({ image, question, time, answerOpened, handleAnswerTheQuestion }) => {
   const [inputText, setInputText] = useState<string>('');
 
   const handleAnswerInput = (e: ChangeEvent<HTMLInputElement>):void => {
@@ -20,7 +21,7 @@ const Question: FC<QuestionProps> = ({ image, question, answerOpened, handleAnsw
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    handleAnswerTheQuestion(inputText);
+    handleAnswerTheQuestion(inputText, true);
   };
 
   return (
@@ -39,7 +40,7 @@ const Question: FC<QuestionProps> = ({ image, question, answerOpened, handleAnsw
         <Input type={InputType.TEXT} name='answer' value={inputText} onChange={handleAnswerInput} />
         <Button type={ButtonType.SUBMIT} isDisabled={false}>Ответить</Button>
       </form>
-      <p className='question__time'>00:22</p>
+      <p className='question__time'>{time}</p>
     </main>
   );
 };
