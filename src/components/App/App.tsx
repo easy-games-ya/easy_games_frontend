@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import ProtectedRoute from '../ProtectedRoute';
@@ -13,7 +13,7 @@ import {
   FinalPageItGame,
 } from '../../games/ItGame/pages/pages';
 
-const App = () => {
+const App: FC = () => {
   const [loggedIn, setLoggedIn] = useState<boolean>(true); // пользователь вошёл в учётную запись?
 
   return (

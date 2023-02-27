@@ -11,10 +11,10 @@ const QuestionPage: FC = () => {
   const [question, setQuestion] = useState<IQuestion>({ id: '', answer: '', score: 0 }); // информация о вопросе
   const [answerOpened, setAnswerOpened] = useState<boolean>(false); // открыт модуль с ответом?
   const [isCorrectAnser, setIsCorrectAnser] = useState<boolean>(true); // ответ правильный?
-  const [time, setTime] = useState<string>('00:00');
+  const [time, setTime] = useState<string>('00:00'); // сколько времени осталось
 
-  let sec: number = 30;
-  let min: number = 0;
+  let min: number = 0; // изначальное количество минут на ответ
+  let sec: number = 30; // изначальное количество секунд на ответ
 
   const doAnswerTheQuestion = (inputText: string, isThereTime: boolean): void => {
     if (question.answer || !isThereTime) {
@@ -39,7 +39,7 @@ const QuestionPage: FC = () => {
     };
   };
 
-  const tick = () => {
+  const tick = (): void => {
     sec--;
     if (sec < 0) {
       sec = 59;
@@ -48,13 +48,9 @@ const QuestionPage: FC = () => {
     setTime(bringTime(min, sec));
   };
 
-  const timer = () => {
-    setTimeout(add, 1000);
-  };
-
-  const add = () => {
+  const add = (): void => {
     tick();
-    !(min == 0 && sec == 0) ? timer(): doAnswerTheQuestion('нет ответа', false);
+    !(min == 0 && sec == 0) ? setTimeout(add, 1000) : doAnswerTheQuestion('нет ответа', false);
   };
 
   useEffect(() => {
@@ -67,14 +63,19 @@ const QuestionPage: FC = () => {
   }, [id]);
 
   useEffect(() => {
-    question.answer !== '' && timer();
+    question.answer !== '' && setTimeout(add, 1000);
   }, [question]);
 
   return (
     <div className='page'>
       <Header />
       {<Question
-        image={question.image} question={question.question} time={time} answerOpened={answerOpened} handleAnswerTheQuestion={doAnswerTheQuestion} />}
+        image={question.image}
+        question={question.question}
+        time={time}
+        answerOpened={answerOpened}
+        handleAnswerTheQuestion={doAnswerTheQuestion}
+      />}
       {<Answer answer={question.answer} answerOpened={answerOpened} isCorrectAnser={isCorrectAnser} />}
     </div>
   );
