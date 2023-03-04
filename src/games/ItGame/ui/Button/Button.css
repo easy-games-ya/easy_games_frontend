@@ -18,9 +18,9 @@
 }
 
 .button:hover {
-  background-color: var(--color-background-input);
+  color: var(--color-text-accent);
 }
 
 .button:focus {
-  color: var(--color-text-accent);
+  transform: scale(.9);
 }

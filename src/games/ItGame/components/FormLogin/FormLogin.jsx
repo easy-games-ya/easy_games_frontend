@@ -20,7 +20,7 @@ const FormLogin = ({ formSubmit, onchange }) => {
         </label>
 
       </fieldset>
-      <Button isSubmit>Вход</Button>
+      <Button type='submit'>Вход</Button>
 
     </form>
   );

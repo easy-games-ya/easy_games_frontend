@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './FinalPage.css';
 import Header from '../../components/Header/Header';
 import finalEmoji from '../../images/it-game_final.svg';
 
-const FinalPage = () => {
+const FinalPage: FC = () => {
   return (
     <div className='page'>
       <Header />

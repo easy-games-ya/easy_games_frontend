@@ -36,20 +36,6 @@
   align-items: center;
 }
 
-.question__input {
-  width: 550px;
-  margin: 0;
-  padding: 17.5px;
-  font-size: 25px;
-  line-height: 30px;
-  font-weight: 500;
-  background-color: var(--color-background-input);
-  color: var(--color-text-base);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border: none;
-  border-radius: 15px;
-}
-
 .question__time {
   position: absolute;
   right: 160px;
