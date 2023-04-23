@@ -1,0 +1,26 @@
+.button {
+  width: 250px;
+  margin: 0;
+  padding: 17.5px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 600;
+  color: var(--color-text-base);
+  background-color: var(--color-background-base);
+  border: none;
+  border-radius: 15px;
+  transition-duration: .5s;
+  cursor: pointer;
+}
+
+.button::first-letter {
+  color: var(--color-text-accent);
+}
+
+.button:hover {
+  color: var(--color-text-accent);
+}
+
+.button:focus {
+  transform: scale(.9);
+}

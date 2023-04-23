@@ -1,8 +1,0 @@
-.page {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 1920px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  color: var(--color-text-base);
-}

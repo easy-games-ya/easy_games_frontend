@@ -1,0 +1,42 @@
+.info-section {
+  display: flex;
+  width: 100%;
+  padding: 0 160px 20px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.info-section__records {
+  display: flex;
+  width: 725px;
+  margin: auto 0 25px;
+  flex-direction: column;
+}
+
+.info-section__records-caption {
+  width: 100%;
+  margin: 0 auto 35px;
+  padding: 0;
+  text-align: center;
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 600;
+}
+
+.info-section__records-row {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  list-style-type: none;
+}
+
+.info-section__time {
+  margin: auto 0 57px 0;
+  padding: 0;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}

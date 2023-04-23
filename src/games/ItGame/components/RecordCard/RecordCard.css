@@ -1,0 +1,28 @@
+.record-card {
+  display: flex;
+  width: 225px;
+  flex-direction: column;
+  padding: 20px 13px 13px;
+  align-items: center;
+  border-radius: 15px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 46.35%);
+  background-color: #7B44A6;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+.record-card__name {
+  margin: 0 0 13px;
+  padding: 0;
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 600;
+}
+
+.record-card__score {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 600;
+}
