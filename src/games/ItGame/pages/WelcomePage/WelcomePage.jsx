@@ -33,7 +33,7 @@ const WelcomePage = () => {
   };
 
   return (
-    <div className='page'>
+    <div className='it-game'>
       <div className='page-container' role='button' tabIndex={0} onKeyDown={closedRules}>
 
         <div className='welcome-page'>

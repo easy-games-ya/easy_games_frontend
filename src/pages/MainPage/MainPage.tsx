@@ -1,20 +1,22 @@
-import React, { Dispatch, FC, SetStateAction } from 'react';
-import { Link } from 'react-router-dom';
+import React, { FC } from 'react';
 import './MainPage.css';
+import Header from '../../modules/Header/Header';
+import Banner from '../../modules/Banner/Banner';
+import Rules from '../../modules/Rules/Rules';
+import Feedback from '../../modules/Feedback/Feedback';
+import Footer from '../../modules/Footer/Footer';
 
-interface MainPageProps {
-  loggedIn: boolean,
-  setLoggedIn: Dispatch<SetStateAction<boolean>>,
-};
-
-const MainPage: FC<MainPageProps> = ({ loggedIn, setLoggedIn }) => {
+const MainPage: FC = () => {
   return (
-    <main className='main'>
-      <h1>Главная страница проекта &quot;Простые игры&quot;</h1>
-      <p>{`Пользователь вошёл в учётную запись? ${loggedIn}`}</p>
-      <button type='button' onClick={() => { setLoggedIn(!loggedIn); }}>Войти - выйти</button>
-      <Link to='/it-game'>IT-игра</Link>
-    </main>
+    <div className='page'>
+      <Header />
+      <main className='main'>
+        <Banner />
+        <Rules />
+        <Feedback />
+      </main>
+      <Footer />
+    </div>
   );
 };
 
