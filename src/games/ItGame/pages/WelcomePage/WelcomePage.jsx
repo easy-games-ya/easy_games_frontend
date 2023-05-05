@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './WelcomePage.css';
 import FormLogin from '../../components/FormLogin/FormLogin';
-import itGameBigLogo from '../../../../images/it-game_big-logo.svg';
+import itGameBigLogo from '../../images/it-game_big-logo.svg';
 import ModalRules from '../../components/ModalRules/ModalRules';
 
 const WelcomePage = () => {
@@ -33,7 +33,7 @@ const WelcomePage = () => {
   };
 
   return (
-    <div className='it-game'>
+    <div className='it-page'>
       <div className='page-container' role='button' tabIndex={0} onKeyDown={closedRules}>
 
         <div className='welcome-page'>

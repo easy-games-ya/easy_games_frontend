@@ -3,7 +3,7 @@ import './Rules.css';
 
 const Rules: FC = () => {
   return (
-    <section>
+    <section id='ruels'>
 
     </section>
   );

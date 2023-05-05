@@ -67,7 +67,7 @@ const QuestionPage: FC = () => {
   }, [question]);
 
   return (
-    <div className='it-game'>
+    <div className='it-page'>
       <Header />
       {<Question
         image={question.image}

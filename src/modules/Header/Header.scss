@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  width: 100%;
+  padding: 20.5px 80px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-background-block);
+  box-sizing: border-box;
+}
+
+.header__logo {
+  width: 112px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.header__link {
+  margin: auto 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--color-text-link);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

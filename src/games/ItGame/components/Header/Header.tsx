@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import './Header.css';
-import itGameLogo from '../../../../images/it-game_logo.svg';
+import itGameLogo from '../../images/it-game_logo.svg';
 
 const Header: FC = () => {
   return (
-    <header className='header'>
-      <img className='header__logo' src={itGameLogo} alt='Своя игра' />
+    <header className='it-header'>
+      <img className='it-header__logo' src={itGameLogo} alt='Есть вопрос' />
     </header>
   );
 };

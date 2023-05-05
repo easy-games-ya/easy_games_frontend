@@ -1,11 +1,11 @@
-.header {
+.it-header {
   display: flex;
   width: 100%;
   padding: 16px 50px 0;
   box-sizing: border-box;
 }
 
-.header__logo {
+.it-header__logo {
   width: 195px;
   height: 63px;
   object-fit: cover;
