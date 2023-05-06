@@ -1,9 +1,9 @@
 .it-page {
   display: flex;
-  flex-direction: column;
-  margin: 0 auto;
   width: 1920px;
+  margin: 0 auto;
   min-height: 1080px;
+  flex-direction: column;
   font-family: 'Montserrat', Arial, sans-serif;
   color: var(--color-text-base);
   background-image: linear-gradient(180deg, #7B44A6 19.75%, #391F4E 128.84%);
