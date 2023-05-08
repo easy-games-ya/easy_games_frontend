@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './MainPage.css';
+import './MainPage.scss';
 import Header from '../../modules/Header/Header';
 import Banner from '../../modules/Banner/Banner';
 import Rules from '../../modules/Rules/Rules';
