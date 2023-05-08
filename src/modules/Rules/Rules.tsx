@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './Rules.css';
+import './Rules.scss';
 
 const Rules: FC = () => {
   return (
