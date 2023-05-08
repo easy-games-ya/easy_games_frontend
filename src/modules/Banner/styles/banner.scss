@@ -1,0 +1,40 @@
+.banner {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-width: 360px;
+  max-width: 1920px;
+  min-height: 557px;
+  padding: 37px 20px 0;
+  flex-direction: column;
+  background: center / cover no-repeat url('../../../images/banner_backgraund.jpg');
+  box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+  .banner {
+    min-height: 707px;
+    padding-top: 57px;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner {
+    min-height: 907px;
+    padding: 47px 80px 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .banner {
+    min-height: 899px;
+    padding: 126px 80px 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .banner {
+    min-height: 987px;
+    padding: 128px 413px 0;
+  }
+}

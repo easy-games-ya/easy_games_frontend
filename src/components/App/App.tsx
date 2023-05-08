@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import ProtectedRoute from '../ProtectedRoute';
 import MainPage from '../../pages/MainPage/MainPage';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
