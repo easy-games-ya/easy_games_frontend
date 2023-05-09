@@ -1,0 +1,13 @@
+.rules-section__rule {
+  position: absolute;
+  margin: 0;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-align: center;
+  color: var(--color-text-base);
+  background-color: var(--color-background-message);
+  border-radius: 8px;
+}

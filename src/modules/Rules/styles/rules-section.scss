@@ -1,0 +1,32 @@
+.rules-section {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 1390px;
+  flex-direction: column;
+  background-color: var(--color-background-block);
+}
+
+@media (min-width: 480px) {
+  .rules-section {
+    min-height: calc(1390px - (100vw - 768px) * .507);
+  }
+}
+
+@media (min-width: 768px) {
+  .rules-section {
+    min-height: calc(1244px + (100vw - 1000px) * .198);
+  }
+}
+
+@media (min-width: 1000px) {
+  .rules-section {
+    min-height: calc(1290px + (100vw - 1000px) * .918);
+  }
+}
+
+@media (min-width: 1920px) {
+  .rules-section {
+    min-height: 2135px;
+  }
+}
