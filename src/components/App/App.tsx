@@ -18,7 +18,7 @@ const App: FC = () => {
 
   return (
     <Routes>
-      <Route path='/' element={<MainPage loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
+      <Route path='/' element={<MainPage />} />
       <Route path='/it-game' element={<ItGame />}>
         <Route path='' element={<ProtectedRoute loggedIn={loggedIn} component={MainPageItGame} link='welcome' />} />
         <Route path='welcome' element={<ProtectedRoute loggedIn={!loggedIn} component={WelcomePageItGame} link='/it-game' />} />

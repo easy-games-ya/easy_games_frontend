@@ -15,7 +15,7 @@ interface QuestionProps {
 const Question: FC<QuestionProps> = ({ image, question, time, answerOpened, handleAnswerTheQuestion }) => {
   const [inputText, setInputText] = useState<string>('');
 
-  const handleAnswerInput = (e: ChangeEvent<HTMLInputElement>):void => {
+  const handleAnswerInput = (e: ChangeEvent<HTMLInputElement>): void => {
     setInputText(e.target.value);
   };
 
@@ -25,7 +25,7 @@ const Question: FC<QuestionProps> = ({ image, question, time, answerOpened, hand
   };
 
   return (
-    <main className={`main question ${answerOpened && 'display_none'}`}>
+    <main className={`it-game__main question ${answerOpened && 'display_none'}`}>
       {
         image
       && <img className='question__image' src={image} alt='изображение' />
