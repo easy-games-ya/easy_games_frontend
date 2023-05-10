@@ -9,23 +9,29 @@
   box-sizing: border-box;
 }
 
+@media (min-width: 360px) {
+  .banner {
+    min-height: calc(557px + (100vw - 360px) * 1.25);
+  }
+}
+
 @media (min-width: 480px) {
   .banner {
-    min-height: 707px;
+    min-height: calc(707px + (100vw - 480px) * .694);
     padding-top: 57px;
   }
 }
 
 @media (min-width: 768px) {
   .banner {
-    min-height: 907px;
+    min-height: calc(907px - (100vw - 768px) * .034);
     padding: 47px 80px 0;
   }
 }
 
 @media (min-width: 1000px) {
   .banner {
-    min-height: 899px;
+    min-height: calc(899px - (100vw - 1000px) * .096);
     padding: 126px 80px 0;
   }
 }

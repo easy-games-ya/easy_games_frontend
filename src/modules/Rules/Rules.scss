@@ -1,4 +1,15 @@
 @import url('./styles/rules-section.scss');
 @import url('./styles/__title/rules-section__title.scss');
 @import url('./styles/__rule/rules-section__rule.scss');
+@import url('./styles/__rule/_step/rules-section__rule_step_select-category.scss');
+@import url('./styles/__rule/_step/rules-section__rule_step_select-cost.scss');
+@import url('./styles/__rule/_step/rules-section__rule_step_answer.scss');
+@import url('./styles/__rule/_step/rules-section__rule_step_wrong.scss');
+@import url('./styles/__rule/_step/rules-section__rule_step_right.scss');
 @import url('./styles/__image/rules-section__image.scss');
+@import url('./styles/__image/_step/rules-section__image_step_select-category.scss');
+@import url('./styles/__image/_step/rules-section__image_step_select-cost.scss');
+@import url('./styles/__image/_step/rules-section__image_step_answer.scss');
+@import url('./styles/__image/_step/rules-section__image_step_wrong.scss');
+@import url('./styles/__image/_step/rules-section__image_step_right.scss');
+@import url('./styles/__path/rules-section__path.scss');

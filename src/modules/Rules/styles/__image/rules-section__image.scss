@@ -3,4 +3,19 @@
   width: 200px;
   height: 200px;
   object-fit: contain;
+  z-index: 1;
+}
+
+@media (min-width: 1000px) {
+  .rules-section__image {
+    width: calc(200px + (100vw - 1000px) * .321);
+    height: calc(200px + (100vw - 1000px) * .321);
+  }
+}
+
+@media (min-width: 1920px) {
+  .rules-section__image {
+    width: 495px;
+    height: 496px;
+  }
 }
