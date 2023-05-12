@@ -1,3 +1,32 @@
 .rules-section__rule_step_wrong {
+  top: 898px;
+  right: 190px;
+}
 
+@media (min-width: 480px) {
+  .rules-section__rule_step_wrong {
+    top: calc(898px - (100vw - 480px) * .118);
+    right: calc(190px - (100vw - 480px) * .608);
+  }
+}
+
+@media (min-width: 768px) {
+  .rules-section__rule_step_wrong {
+    top: calc(932px + (100vw - 768px) * .198);
+    right: calc(15px + (100vw - 768px) * .134);
+  }
+}
+
+@media (min-width: 1000px) {
+  .rules-section__rule_step_wrong {
+    top: calc(978px + (100vw - 1000px) * .564);
+    right: calc(46px + (100vw - 1000px) * .334);
+  }
+}
+
+@media (min-width: 1920px) {
+  .rules-section__rule_step_wrong {
+    top: 1497px;
+    right: 353px;
+  }
 }

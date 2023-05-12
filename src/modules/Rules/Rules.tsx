@@ -16,9 +16,9 @@ const Rules: FC = () => {
       <img className='rules-section__image rules-section__image_step_select-cost' src={selectCostImage} alt='Выбери вопрос' />
       <p className='rules-section__rule rules-section__rule_step_answer'>Есть 30 секунд прочитать и ответить</p>
       <img className='rules-section__image rules-section__image_step_answer' src={answerImage} alt='Ответь на вопрос' />
-      <p className='rules-section__rule rules-section__rule_step_wrong'>За не правильной ответ баллы отнимаются </p>
+      <p className='rules-section__rule rules-section__rule_step_wrong'>За неправильный ответ баллы отнимаются </p>
       <img className='rules-section__image rules-section__image_step_wrong' src={wrongImage} alt='Неправильный ответ' />
-      <p className='rules-section__rule rules-section__rule_step_right'>За правильной ответ баллы прибавляются </p>
+      <p className='rules-section__rule rules-section__rule_step_right'>За правильный ответ баллы прибавляются </p>
       <img className='rules-section__image rules-section__image_step_right' src={rightImage} alt='Правильный ответ!' />
       <div className='rules-section__path' />
     </section>

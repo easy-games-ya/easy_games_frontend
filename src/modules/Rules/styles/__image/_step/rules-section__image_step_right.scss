@@ -1,3 +1,32 @@
 .rules-section__image_step_right {
+  top: 1118px;
+  left: 20px;
+}
 
+@media (min-width: 480px) {
+  .rules-section__image_step_right {
+    top: calc(1118px - (100vw - 480px) * .625);
+    left: calc(20px + (100vw - 480px) * .479);
+  }
+}
+
+@media (min-width: 768px) {
+  .rules-section__image_step_right {
+    top: calc(938px + (100vw - 768px) * .069);
+    left: calc(158px + (100vw - 768px) * .108);
+  }
+}
+
+@media (min-width: 1000px) {
+  .rules-section__image_step_right {
+    top: calc(954px + (100vw - 1000px) * .582);
+    left: calc(183px + (100vw - 1000px) * .296);
+  }
+}
+
+@media (min-width: 1920px) {
+  .rules-section__image_step_right {
+    top: 1489px;
+    left: 455px;
+  }
 }
