@@ -1,0 +1,31 @@
+.rules-section__image_step_select-cost {
+  top: 422px;
+  right: 21px;
+}
+
+@media (min-width: 480px) {
+  .rules-section__image_step_select-cost {
+    top: calc(422px - (100vw - 480px) * .212);
+    right: calc(21px + (100vw - 480px) * .184);
+  }
+}
+
+@media (min-width: 768px) {
+  .rules-section__image_step_select-cost {
+    right: calc(74px + (100vw - 768px) * .828);
+  }
+}
+
+@media (min-width: 1000px) {
+  .rules-section__image_step_select-cost {
+    top: calc(356px + (100vw - 1000px) * .15);
+    right: calc(266px + (100vw - 1000px) * .093);
+  }
+}
+
+@media (min-width: 1920px) {
+  .rules-section__image_step_select-cost {
+    top: 494px;
+    right: 352px;
+  }
+}

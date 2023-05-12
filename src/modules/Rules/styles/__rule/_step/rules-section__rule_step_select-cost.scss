@@ -1,0 +1,33 @@
+.rules-section__rule_step_select-cost {
+  max-width: 130px;
+  top: 422px;
+  right: 210px;
+}
+
+@media (min-width: 480px) {
+  .rules-section__rule_step_select-cost {
+    top: calc(422px - (100vw - 480px) * .212);
+    right: calc(210px + (100vw - 480px) * .181);
+  }
+}
+
+@media (min-width: 768px) {
+  .rules-section__rule_step_select-cost {
+    right: calc(262px + (100vw - 768px) * .832);
+  }
+}
+
+@media (min-width: 1000px) {
+  .rules-section__rule_step_select-cost {
+    max-width: calc(130px + (100vw - 1000px) * .397);
+    top: calc(356px + (100vw - 1000px) * .126);
+    right: 455px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .rules-section__rule_step_select-cost {
+    max-width: 495px;
+    top: 472px;
+  }
+}

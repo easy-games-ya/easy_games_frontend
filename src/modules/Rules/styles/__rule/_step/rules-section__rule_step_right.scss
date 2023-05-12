@@ -1,0 +1,32 @@
+.rules-section__rule_step_right {
+  top: 1118px;
+  left: 190px;
+}
+
+@media (min-width: 480px) {
+  .rules-section__rule_step_right {
+    top: calc(1118px - (100vw - 480px) * .625);
+    left: calc(190px - (100vw - 480px) * .59);
+  }
+}
+
+@media (min-width: 768px) {
+  .rules-section__rule_step_right {
+    top: calc(938px + (100vw - 768px) * .069);
+    left: calc(20px + (100vw - 768px) * .108);
+  }
+}
+
+@media (min-width: 1000px) {
+  .rules-section__rule_step_right {
+    top: calc(954px + (100vw - 1000px) * .558);
+    left: calc(45px + (100vw - 1000px) * .334);
+  }
+}
+
+@media (min-width: 1920px) {
+  .rules-section__rule_step_right {
+    top: 1467px;
+    left: 352px;
+  }
+}
