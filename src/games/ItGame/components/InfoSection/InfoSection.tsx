@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from 'react';
 import './InfoSection.css';
 import ProfileCard from '../ProfileCard/ProfileCard';
 import RecordCard, { RecordCardProps } from '../RecordCard/RecordCard';
-import avatar from '../../../../images/it-game_avatar.svg';
+import avatar from '../../images/it-game_avatar.svg';
 
 const InfoSection: FC = () => {
   const [recordsList, setRecordsList] = useState<Array<RecordCardProps>>([]); // список рекордов для этой игры

@@ -1,0 +1,40 @@
+.rules-section__title {
+  margin: 92px 12px auto 32px;
+  padding: 0;
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--color-text-base);
+}
+
+@media (min-width: 480px) {
+  .rules-section__title {
+    margin-left: calc(32px + (100vw - 480px) * .021);
+  }
+}
+
+@media (min-width: 768px) {
+  .rules-section__title {
+    margin-top: calc(92px + (100vw - 768px) * .172);
+    margin-left: calc(38px + (100vw - 768px) * .095);
+  }
+}
+
+@media (min-width: 1000px) {
+  .rules-section__title {
+    margin-top: 132px;
+    margin-left: calc(60px + (100vw - 1000px) * .33);
+    font-size: calc(32px + (100vw - 1000px) * .009);
+    line-height: calc(39px + (100vw - 1000px) * .01);
+  }
+}
+
+@media (min-width: 1920px) {
+  .rules-section__title {
+    margin-left: 364px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+}

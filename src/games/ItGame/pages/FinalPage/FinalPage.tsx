@@ -5,9 +5,9 @@ import finalEmoji from '../../images/it-game_final.svg';
 
 const FinalPage: FC = () => {
   return (
-    <div className='it-game'>
+    <div className='it-page'>
       <Header />
-      <main className='it-game__main final'>
+      <main className='it-page__main final'>
         <h1 className='final__title'>Игра окончена!</h1>
         <p className='final__subtitle'>
           Иероним, вы набрали

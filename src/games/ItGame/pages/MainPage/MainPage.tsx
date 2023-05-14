@@ -8,9 +8,9 @@ const MainPage: FC = () => {
   const { categoriesList } = useCategories();
 
   return (
-    <div className='it-game'>
+    <div className='it-page'>
       <Header />
-      <main className='it-game__main'>
+      <main className='it-page__main'>
         <PlayingField categoriesList={categoriesList} />
         <InfoSection />
       </main>

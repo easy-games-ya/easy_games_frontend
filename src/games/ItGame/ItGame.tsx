@@ -1,6 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import { Outlet, useOutletContext } from 'react-router-dom';
-import './ItGame.css';
+import './utils/vars.css';
+import './ItGame.scss';
 import itGameApi from './api/itGameApi';
 import { IResponseCard } from './utils/types';
 
@@ -16,7 +17,9 @@ const ItGame: FC = () => {
   }, []);
 
   return (
-    <Outlet context={{ categoriesList }} />
+    <div className='it-game'>
+      <Outlet context={{ categoriesList }} />
+    </div>
   );
 };
 

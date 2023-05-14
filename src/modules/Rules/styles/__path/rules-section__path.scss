@@ -1,0 +1,39 @@
+.rules-section__path {
+  position: absolute;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .rules-section__path {
+    display: block;
+    width: calc(572px + (100vw - 768px) * .31);
+    height: 696px;
+    top: 374px;
+    left: calc(108px + (100vw - 768px) * .095);
+    background-image: url('../../../../images/rule_path_screen_768px.svg');
+    background-size: 100% 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .rules-section__path {
+    width: calc(644px + (100vw - 1000px) * .083);
+    height: calc(696px + (100vw - 1000px) * .36);
+    top: calc(374px + (100vw - 1000px) * .259);
+    left: calc(130px + (100vw - 1000px) * .524);
+    background-image: url('../../../../images/rule_path_screen_1000px.svg');
+  }
+}
+
+
+@media (min-width: 1920px) {
+  .rules-section__path {
+    display: block;
+    width: 720px;
+    height: 1027px;
+    top: 612px;
+    left: 732px;
+    background-image: url('../../../../images/rule_path_screen_1920px.svg');
+  }
+}
+

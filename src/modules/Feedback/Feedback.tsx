@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './Feedback.css';
+import './Feedback.scss';
 
 const Feedback: FC = () => {
   return (

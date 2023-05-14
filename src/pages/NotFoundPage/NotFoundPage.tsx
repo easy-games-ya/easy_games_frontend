@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useNavigate } from 'react-router-dom'; // подключает хук для программной навигации
-import './NotFoundPage.css';
+import './NotFoundPage.scss';
 import Header from '../../modules/Header/Header';
 
 const NotFoundPage: FC = () => {
