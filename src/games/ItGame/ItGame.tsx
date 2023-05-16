@@ -3,16 +3,16 @@ import { Outlet, useOutletContext } from 'react-router-dom';
 import './utils/vars.css';
 import './ItGame.scss';
 import itGameApi from './api/itGameApi';
-import { IResponseCard } from './utils/types';
+import { ICategoryCard } from './utils/types';
 
-type CardsContextType = { categoriesList: IResponseCard[] };
+type CardsContextType = { categoriesList: ICategoryCard[] };
 
 const ItGame: FC = () => {
-  const [categoriesList, setCategoriesList] = useState<Array<IResponseCard>>([]); // список категорий в игре
+  const [categoriesList, setCategoriesList] = useState<Array<ICategoryCard>>([]); // список категорий в игре
 
   useEffect(() => {
     itGameApi
-      .getCards({ username: 'testuser', password: 'i113R56qV' })
+      .getCategories(5)
       .then((res) => { setCategoriesList(res); });
   }, []);
 

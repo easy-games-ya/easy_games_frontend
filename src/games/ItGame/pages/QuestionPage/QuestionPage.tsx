@@ -56,7 +56,7 @@ const QuestionPage: FC = () => {
   useEffect(() => {
     setTime(bringTime(min, sec));
     itGameApi
-      .getQuestionById({ username: 'testuser', password: 'i113R56qV' }, id!)
+      .getQuestionById(id!)
       .then((res) => {
         setQuestion(res);
       });

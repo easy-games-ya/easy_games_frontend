@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './Answer.css';
+import './Answer.scss';
 import rightImage from '../../images/it-game_right.svg';
 import failImage from '../../images/it-game_fail.svg';
 

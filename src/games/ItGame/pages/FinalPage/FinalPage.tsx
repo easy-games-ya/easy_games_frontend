@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './FinalPage.css';
+import './FinalPage.scss';
 import Header from '../../components/Header/Header';
 import finalEmoji from '../../images/it-game_final.svg';
 

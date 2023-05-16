@@ -1,14 +1,16 @@
 import React, { FC } from 'react';
-import './PlayingField.css';
+import './PlayingField.scss';
 import PlayingCard from '../PlayingCard/PlayingCard';
-import { IResponseCard } from '../../utils/types';
+import { ICategoryCard } from '../../utils/types';
 import { PlayingCardType } from '../../utils/enums';
 
 interface PlayingFieldProps {
-  categoriesList: IResponseCard[],
+  categoriesList: ICategoryCard[],
 }
 
 const PlayingField: FC<PlayingFieldProps> = ({ categoriesList }) => {
+  const costList: number[] = [100, 200, 300, 400, 500];
+
   return (
     <section className='playing-field'>
       <ul className='playing-field__themes'>
@@ -21,13 +23,13 @@ const PlayingField: FC<PlayingFieldProps> = ({ categoriesList }) => {
         })}
       </ul>
       <ul className='playing-field__questions'>
-        {categoriesList.map((category: { id: string, question: string[] }) => {
+        {categoriesList.map((category: { id: number }) => {
           return (
             <ul className='playing-field__questions' key={category.id}>
-              {category.question.map((card, index) => {
+              {costList.map((cost) => {
                 return (
-                  <li className='playing-field__item' key={category.question[index]}>
-                    <PlayingCard id={category.question[index]} type={PlayingCardType.QUESTION}>{((index + 1) * 100)}</PlayingCard>
+                  <li className='playing-field__item' key={category.id + cost}>
+                    <PlayingCard id={category.id} type={PlayingCardType.QUESTION}>{cost}</PlayingCard>
                   </li>
                 );
               })}

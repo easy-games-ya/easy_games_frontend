@@ -10,10 +10,10 @@
   line-height: 73px;
   font-weight: 600;
   text-transform: uppercase;
-}
 
-.answer__text::first-letter {
-  color: var(--color-text-accent);
+  &::first-letter {
+    color: var(--color-text-accent);
+  }
 }
 
 .answer__image {

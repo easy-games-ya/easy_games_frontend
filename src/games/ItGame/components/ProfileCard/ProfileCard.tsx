@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './ProfileCard.css';
+import './ProfileCard.scss';
 
 interface ProfileCardProps {
   name: string,

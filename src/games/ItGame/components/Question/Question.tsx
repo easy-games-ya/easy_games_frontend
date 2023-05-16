@@ -1,5 +1,5 @@
 import React, { FC, useState, ChangeEvent, FormEvent } from 'react';
-import './Question.css';
+import './Question.scss';
 import Button from '../../ui/Button/Button';
 import { ButtonType, InputType } from '../../utils/enums';
 import Input from '../../ui/Input/Input';

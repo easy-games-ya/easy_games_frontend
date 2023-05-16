@@ -14,16 +14,16 @@
   border-radius: 15px;
   transition-duration: .7s;
   cursor: pointer;
-}
 
-.playing-card:hover {
-  opacity: .77;
-}
+  &:hover {
+    opacity: .77;
+  }
 
-.playing-card__inactive {
-  opacity: .15;
-}
+  &_inactive {
+    opacity: .15;
 
-.playing-card__inactive:hover {
-  opacity: .15;
+    &:hover {
+      opacity: .15;
+    }
+  }
 }

@@ -14,10 +14,10 @@
   line-height: 91px;
   font-weight: 700;
   text-transform: uppercase;
-}
 
-.final__title::first-letter {
-  color: var(--color-text-accent);
+  &::first-letter {
+    color: var(--color-text-accent);
+  }
 }
 
 .final__subtitle {
