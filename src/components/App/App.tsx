@@ -4,7 +4,7 @@ import './App.scss';
 import ProtectedRoute from '../ProtectedRoute';
 import MainPage from '../../pages/MainPage/MainPage';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
-import ItGame from '../../games/ItGame/ItGame';
+import ItGame from '../../games/ItGame';
 import * as itGamePages from '../../games/ItGame/pages/pages';
 
 const App: FC = () => {
