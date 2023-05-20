@@ -5,14 +5,14 @@ import { ButtonType, InputType } from '../../utils/enums';
 import Input from '../../ui/Input/Input';
 
 interface QuestionProps {
-  image?: string,
-  question?: string,
+  image: string | null,
+  question: string,
   time: string;
-  answerOpened: boolean,
+  questionOpened: boolean,
   handleAnswerTheQuestion: (inputText: string, isThereTime: boolean) => void,
 }
 
-const Question: FC<QuestionProps> = ({ image, question, time, answerOpened, handleAnswerTheQuestion }) => {
+const Question: FC<QuestionProps> = ({ image, question, time, questionOpened, handleAnswerTheQuestion }) => {
   const [inputText, setInputText] = useState<string>('');
 
   const handleAnswerInput = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -21,11 +21,12 @@ const Question: FC<QuestionProps> = ({ image, question, time, answerOpened, hand
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    handleAnswerTheQuestion(inputText, true);
+    const userAnswer = inputText ? inputText : 'нет ответа';
+    handleAnswerTheQuestion(userAnswer, true);
   };
 
   return (
-    <main className={`it-game__main question ${answerOpened && 'display_none'}`}>
+    <section className={`question ${questionOpened ? 'question_showed' : ''}`}>
       {
         image
       && <img className='question__image' src={image} alt='изображение' />
@@ -41,7 +42,7 @@ const Question: FC<QuestionProps> = ({ image, question, time, answerOpened, hand
         <Button type={ButtonType.SUBMIT} isDisabled={false}>Ответить</Button>
       </form>
       <p className='question__time'>{time}</p>
-    </main>
+    </section>
   );
 };
 

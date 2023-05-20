@@ -1,7 +1,14 @@
 .question {
+  display: none;
+  width: 100%;
+  flex-direction: column;
   position: relative;
   justify-content: space-between;
   min-height: 1064px;
+
+  &_showed {
+    display: flex;
+  }
 }
 
 .question__text {

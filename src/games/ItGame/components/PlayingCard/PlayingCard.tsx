@@ -12,7 +12,7 @@ export interface PlayingCardProps {
 const PlayingCard: FC<PlayingCardProps> = ({ id, type, children }) => {
   return ((type === PlayingCardType.QUESTION)
     ? (
-      <Link className='playing-card' to={`question/${id}/cost/${children}`}>{children}</Link>
+      <Link className='playing-card' to={`category/${id}/cost/${children}`}>{children}</Link>
     )
     : (
       <div className='playing-card'>{children}</div>

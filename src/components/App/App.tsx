@@ -16,7 +16,7 @@ const App: FC = () => {
       <Route path='/it-game' element={<ItGame />}>
         <Route path='' element={<ProtectedRoute loggedIn={loggedIn} component={itGamePages.MainPageItGame} link='welcome' />} />
         <Route path='welcome' element={<ProtectedRoute loggedIn={!loggedIn} component={itGamePages.WelcomePageItGame} link='/it-game' />} />
-        <Route path='question/:id' element={<itGamePages.QuestionPageItGame />} />
+        <Route path='category/:id/cost/:cost' element={<itGamePages.QuestionPageItGame />} />
         <Route path='final' element={<itGamePages.FinalPageItGame />} />
       </Route>
       <Route path='/easy_games_frontend' element={<Navigate to='/' replace />} />

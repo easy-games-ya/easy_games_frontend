@@ -3,15 +3,17 @@
   width: 250px;
   height: 100px;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   font-size: 20px;
-  line-height: 100px;
   font-weight: 700;
+  text-align: center;
+  align-items: center;
   justify-content: center;
   color: var( --color-text-addtional);
   text-decoration: none;
   background-color: var(--color-background-additional);
   border-radius: 15px;
+  box-sizing: border-box;
   transition-duration: .7s;
   cursor: pointer;
 

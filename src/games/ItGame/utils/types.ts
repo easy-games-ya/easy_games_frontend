@@ -21,10 +21,10 @@ export interface IResponseCard {
 };
 
 export interface IQuestion {
-  id: string,
-  question?: string,
+  id: number,
+  question: string,
   answer: string,
-  image?: string,
-  category?: string,
+  image: string | null,
+  category: number,
   score: number,
 };

@@ -1,6 +1,13 @@
 .answer {
+  display: none;
+  width: 100%;
+  flex-direction: column;
   justify-content: center;
   min-height: 1064px;
+
+  &_showed {
+    display: flex;
+  }
 }
 
 .answer__text {

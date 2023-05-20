@@ -7,8 +7,8 @@ import itGameApi from '../../api/itGameApi';
 import { IQuestion } from '../../utils/types';
 
 const QuestionPage: FC = () => {
-  const { id } = useParams(); // id вопроса, получаемый из url-адреса текущей страницы
-  const [question, setQuestion] = useState<IQuestion>({ id: '', answer: '', score: 0 }); // информация о вопросе
+  const { id, cost } = useParams(); // id вопроса, получаемый из url-адреса текущей страницы
+  const [question, setQuestion] = useState<IQuestion>({ id: 0, question: '', answer: '', image: null, category: 0, score: 0 }); // информация о вопросе
   const [answerOpened, setAnswerOpened] = useState<boolean>(false); // открыт модуль с ответом?
   const [isCorrectAnser, setIsCorrectAnser] = useState<boolean>(true); // ответ правильный?
   const [time, setTime] = useState<string>('00:00'); // сколько времени осталось
@@ -18,8 +18,8 @@ const QuestionPage: FC = () => {
 
   const doAnswerTheQuestion = (inputText: string, isThereTime: boolean): void => {
     if (question.answer || !isThereTime) {
+      setIsCorrectAnser(question.answer.toLowerCase() === inputText.toLowerCase());
       setAnswerOpened(true);
-      setIsCorrectAnser(question.answer === inputText);
     };
   };
 
@@ -54,12 +54,14 @@ const QuestionPage: FC = () => {
   };
 
   useEffect(() => {
-    setTime(bringTime(min, sec));
-    itGameApi
-      .getQuestionById(id!)
-      .then((res) => {
-        setQuestion(res);
-      });
+    if (id && cost) {
+      setTime(bringTime(min, sec));
+      itGameApi
+        .getQuestionById(id, cost)
+        .then((res) => {
+          setQuestion(res);
+        });
+    }
   }, [id]);
 
   useEffect(() => {
@@ -69,14 +71,16 @@ const QuestionPage: FC = () => {
   return (
     <div className='it-page'>
       <Header />
-      {<Question
-        image={question.image}
-        question={question.question}
-        time={time}
-        answerOpened={answerOpened}
-        handleAnswerTheQuestion={doAnswerTheQuestion}
-      />}
-      {<Answer answer={question.answer} answerOpened={answerOpened} isCorrectAnser={isCorrectAnser} />}
+      <main className='it-page__main'>
+        {<Question
+          image={question.image}
+          question={question.question}
+          time={time}
+          questionOpened={!answerOpened}
+          handleAnswerTheQuestion={doAnswerTheQuestion}
+        />}
+        {<Answer answer={question.answer} answerOpened={answerOpened} isCorrectAnser={isCorrectAnser} />}
+      </main>
     </div>
   );
 };
