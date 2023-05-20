@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/easy_games_frontend/static/css/main.17072304.css",
-    "main.js": "/easy_games_frontend/static/js/main.e6790cdb.js",
+    "main.css": "/easy_games_frontend/static/css/main.a9551f60.css",
+    "main.js": "/easy_games_frontend/static/js/main.6132b94c.js",
     "static/js/787.4c07c755.chunk.js": "/easy_games_frontend/static/js/787.4c07c755.chunk.js",
     "static/media/banner_backgraund.jpg": "/easy_games_frontend/static/media/banner_backgraund.603c095a84020b37fbe7.jpg",
     "static/media/Montserrat-SemiBold.ttf": "/easy_games_frontend/static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
@@ -9,19 +9,27 @@
     "static/media/Montserrat-Bold.ttf": "/easy_games_frontend/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
     "static/media/it-game-illustration.svg": "/easy_games_frontend/static/media/it-game-illustration.e1a8e7f23fdad91546ae9f66c07ac1ff.svg",
     "static/media/it-game-logo.svg": "/easy_games_frontend/static/media/it-game-logo.a6e1716f1c0bf1d82e2d1141a175a44b.svg",
+    "static/media/rule_step_select-cost.svg": "/easy_games_frontend/static/media/rule_step_select-cost.260fca18b92ff0f52a1b225cf6706283.svg",
+    "static/media/rule_step_wrong.svg": "/easy_games_frontend/static/media/rule_step_wrong.b6e707be638d101be3a819b004eeff66.svg",
+    "static/media/rule_step_right.svg": "/easy_games_frontend/static/media/rule_step_right.da5f536a77d48a824848b7962e036edc.svg",
     "static/media/it-game_right.svg": "/easy_games_frontend/static/media/it-game_right.b45744776ad4487611d595a73b77c6cb.svg",
+    "static/media/rule_step_select-category.svg": "/easy_games_frontend/static/media/rule_step_select-category.3b23c58ef36242cbb564bd069ed34f59.svg",
     "static/media/it-game_fail.svg": "/easy_games_frontend/static/media/it-game_fail.5d28409189599ad51fd33fba782d55d0.svg",
     "static/media/it-game_final.svg": "/easy_games_frontend/static/media/it-game_final.f848f06b1d4c14f360223de69af5e8d3.svg",
     "static/media/it-game_avatar.svg": "/easy_games_frontend/static/media/it-game_avatar.f10fe33be331daa67cf71a042b10049b.svg",
+    "static/media/rule_step_answer.svg": "/easy_games_frontend/static/media/rule_step_answer.8cba3482ea1f56be526aff09dc65bb62.svg",
     "static/media/it-game_logo.svg": "/easy_games_frontend/static/media/it-game_logo.e09342e5e08a7d1de5487b205c9da66f.svg",
     "static/media/it-game_big-logo.svg": "/easy_games_frontend/static/media/it-game_big-logo.70f5bdd93bce7174840a45e3cd4d40b6.svg",
+    "static/media/rule_path_screen_1920px.svg": "/easy_games_frontend/static/media/rule_path_screen_1920px.4e94180d97f41fe29162.svg",
+    "static/media/rule_path_screen_1000px.svg": "/easy_games_frontend/static/media/rule_path_screen_1000px.08c4bfdf03e2b9cfbcf8.svg",
+    "static/media/rule_path_screen_768px.svg": "/easy_games_frontend/static/media/rule_path_screen_768px.31087d61809a7deea649.svg",
     "index.html": "/easy_games_frontend/index.html",
-    "main.17072304.css.map": "/easy_games_frontend/static/css/main.17072304.css.map",
-    "main.e6790cdb.js.map": "/easy_games_frontend/static/js/main.e6790cdb.js.map",
+    "main.a9551f60.css.map": "/easy_games_frontend/static/css/main.a9551f60.css.map",
+    "main.6132b94c.js.map": "/easy_games_frontend/static/js/main.6132b94c.js.map",
     "787.4c07c755.chunk.js.map": "/easy_games_frontend/static/js/787.4c07c755.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.17072304.css",
-    "static/js/main.e6790cdb.js"
+    "static/css/main.a9551f60.css",
+    "static/js/main.6132b94c.js"
   ]
 }
