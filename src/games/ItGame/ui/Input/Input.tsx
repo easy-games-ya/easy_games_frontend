@@ -1,6 +1,6 @@
 import React, { FC, ChangeEvent } from 'react';
 import { InputType } from '../../utils/enums';
-import './Input.css';
+import './Input.scss';
 
 interface InputProps {
   className?: string,

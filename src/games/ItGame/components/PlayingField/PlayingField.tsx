@@ -13,11 +13,12 @@ const PlayingField: FC<PlayingFieldProps> = ({ categoriesList }) => {
 
   return (
     <section className='playing-field'>
-      <ul className='playing-field__themes'>
+      <ul className='playing-field__categories'>
         {categoriesList.map((card) => {
           return (
             <li className='playing-field__item' key={card.id}>
               <PlayingCard id={card.id} type={PlayingCardType.CATEGORY}>{card.title}</PlayingCard>
+              <div className='playing-field__category-description'>{card.description}</div>
             </li>
           );
         })}

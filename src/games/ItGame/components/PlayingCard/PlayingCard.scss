@@ -5,6 +5,7 @@
   margin: 0;
   padding: 10px;
   font-size: 20px;
+  line-height: 24px;
   font-weight: 700;
   text-align: center;
   align-items: center;
@@ -15,17 +16,22 @@
   border-radius: 15px;
   box-sizing: border-box;
   transition-duration: .7s;
-  cursor: pointer;
-
-  &:hover {
-    opacity: .77;
-  }
 
   &_inactive {
     opacity: .15;
 
     &:hover {
       opacity: .15;
+    }
+  }
+
+  &_type {
+    &_question {
+      cursor: pointer;
+
+      &:hover {
+        opacity: .77;
+      }
     }
   }
 }

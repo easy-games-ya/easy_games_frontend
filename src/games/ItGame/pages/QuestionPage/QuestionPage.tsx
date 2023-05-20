@@ -39,7 +39,7 @@ const QuestionPage: FC = () => {
     };
   };
 
-  const tick = (): void => {
+  const secTick = (): void => {
     sec--;
     if (sec < 0) {
       sec = 59;
@@ -48,9 +48,9 @@ const QuestionPage: FC = () => {
     setTime(bringTime(min, sec));
   };
 
-  const add = (): void => {
-    tick();
-    !(min == 0 && sec == 0) ? setTimeout(add, 1000) : doAnswerTheQuestion('нет ответа', false);
+  const timerStep = (): void => {
+    secTick();
+    !(min == 0 && sec == 0 && question.answer !== '') ? setTimeout(timerStep, 1000) : doAnswerTheQuestion('нет ответа', false);
   };
 
   useEffect(() => {
@@ -65,7 +65,7 @@ const QuestionPage: FC = () => {
   }, [id]);
 
   useEffect(() => {
-    question.answer !== '' && setTimeout(add, 1000);
+    question.answer !== '' && setTimeout(timerStep, 1000);
   }, [question]);
 
   return (

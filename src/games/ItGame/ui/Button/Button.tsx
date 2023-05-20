@@ -1,20 +1,40 @@
 import React, { FC, ReactNode } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Button.scss';
 import { ButtonType } from '../../utils/enums';
-import './Button.css';
 
-interface ButtonProps {
+type ButtonProps = {
   className?: string,
-  onClick?: () => {},
+  type: ButtonType.BUTTON | ButtonType.SUBMIT | ButtonType.RESET,
+  onClick?: void,
+  to?: undefined,
   isDisabled?: boolean,
-  type: ButtonType,
   children: ReactNode,
-}
+};
 
-const Button: FC<ButtonProps> = ({
-  className = '', onClick = () => {}, isDisabled = true, type, children,
+type LinkProps = {
+  className?: string,
+  type: ButtonType.LINK,
+  onClick?: undefined,
+  to: string,
+  isDisabled?: boolean,
+  children: ReactNode,
+};
+
+type ButtonComponentProps = ButtonProps | LinkProps;
+
+const Button: FC<ButtonComponentProps> = ({
+  className = '', type, onClick = () => {}, to, isDisabled = false, children,
 }) => {
+  const navigate = useNavigate(); // хук для использования программной навигации
+
   return (
-    <button className={`button ${className}`} type={type} onClick={onClick} disabled={isDisabled}>
+    <button
+      className={`button ${className}`}
+      type={type === ButtonType.LINK ? ButtonType.BUTTON : type}
+      onClick={type === ButtonType.LINK ? () => { navigate(to); } : onClick}
+      disabled={isDisabled}
+    >
       {children}
     </button>
   );

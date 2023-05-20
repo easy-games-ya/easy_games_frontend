@@ -1,8 +1,8 @@
 import React, { FC, useState, ChangeEvent, FormEvent } from 'react';
 import './Question.scss';
 import Button from '../../ui/Button/Button';
-import { ButtonType, InputType } from '../../utils/enums';
 import Input from '../../ui/Input/Input';
+import { ButtonType, InputType } from '../../utils/enums';
 
 interface QuestionProps {
   image: string | null,
@@ -39,7 +39,7 @@ const Question: FC<QuestionProps> = ({ image, question, time, questionOpened, ha
       }
       <form className='question__form' onSubmit={handleSubmit}>
         <Input type={InputType.TEXT} name='answer' value={inputText} onChange={handleAnswerInput} />
-        <Button type={ButtonType.SUBMIT} isDisabled={false}>Ответить</Button>
+        <Button type={ButtonType.SUBMIT}>Ответить</Button>
       </form>
       <p className='question__time'>{time}</p>
     </section>

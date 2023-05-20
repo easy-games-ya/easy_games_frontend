@@ -13,13 +13,6 @@ export interface ICategoryCard {
   description: string,
 };
 
-export interface IResponseCard {
-  description: string,
-  id: string,
-  question: string[],
-  title: string,
-};
-
 export interface IQuestion {
   id: number,
   question: string,
