@@ -1,1 +1,1 @@
-export const baseUrl: string = 'https://myowngame.onrender.com/mog/api';
+export const baseUrl: string = 'https://myowngame-y039.onrender.com/mog/api';

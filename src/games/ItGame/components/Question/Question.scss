@@ -1,7 +1,14 @@
 .question {
+  display: none;
+  width: 100%;
+  flex-direction: column;
   position: relative;
   justify-content: space-between;
   min-height: 1064px;
+
+  &_showed {
+    display: flex;
+  }
 }
 
 .question__text {
@@ -13,10 +20,10 @@
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-}
 
-.question__text::first-letter {
-  color: var(--color-text-accent);
+  &::first-letter {
+    color: var(--color-text-accent);
+  }
 }
 
 .question__image {

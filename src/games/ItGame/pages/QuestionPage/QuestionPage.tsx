@@ -7,8 +7,8 @@ import itGameApi from '../../api/itGameApi';
 import { IQuestion } from '../../utils/types';
 
 const QuestionPage: FC = () => {
-  const { id } = useParams(); // id вопроса, получаемый из url-адреса текущей страницы
-  const [question, setQuestion] = useState<IQuestion>({ id: '', answer: '', score: 0 }); // информация о вопросе
+  const { id, cost } = useParams(); // id вопроса, получаемый из url-адреса текущей страницы
+  const [question, setQuestion] = useState<IQuestion>({ id: 0, question: '', answer: '', image: null, category: 0, score: 0 }); // информация о вопросе
   const [answerOpened, setAnswerOpened] = useState<boolean>(false); // открыт модуль с ответом?
   const [isCorrectAnser, setIsCorrectAnser] = useState<boolean>(true); // ответ правильный?
   const [time, setTime] = useState<string>('00:00'); // сколько времени осталось
@@ -18,8 +18,8 @@ const QuestionPage: FC = () => {
 
   const doAnswerTheQuestion = (inputText: string, isThereTime: boolean): void => {
     if (question.answer || !isThereTime) {
+      setIsCorrectAnser(question.answer.toLowerCase() === inputText.toLowerCase());
       setAnswerOpened(true);
-      setIsCorrectAnser(question.answer === inputText);
     };
   };
 
@@ -39,7 +39,7 @@ const QuestionPage: FC = () => {
     };
   };
 
-  const tick = (): void => {
+  const secTick = (): void => {
     sec--;
     if (sec < 0) {
       sec = 59;
@@ -48,35 +48,39 @@ const QuestionPage: FC = () => {
     setTime(bringTime(min, sec));
   };
 
-  const add = (): void => {
-    tick();
-    !(min == 0 && sec == 0) ? setTimeout(add, 1000) : doAnswerTheQuestion('нет ответа', false);
+  const timerStep = (): void => {
+    secTick();
+    !(min == 0 && sec == 0 && question.answer !== '') ? setTimeout(timerStep, 1000) : doAnswerTheQuestion('нет ответа', false);
   };
 
   useEffect(() => {
-    setTime(bringTime(min, sec));
-    itGameApi
-      .getQuestionById({ username: 'testuser', password: 'i113R56qV' }, id!)
-      .then((res) => {
-        setQuestion(res);
-      });
+    if (id && cost) {
+      setTime(bringTime(min, sec));
+      itGameApi
+        .getQuestionById(id, cost)
+        .then((res) => {
+          setQuestion(res);
+        });
+    }
   }, [id]);
 
   useEffect(() => {
-    question.answer !== '' && setTimeout(add, 1000);
+    question.answer !== '' && setTimeout(timerStep, 1000);
   }, [question]);
 
   return (
     <div className='it-page'>
       <Header />
-      {<Question
-        image={question.image}
-        question={question.question}
-        time={time}
-        answerOpened={answerOpened}
-        handleAnswerTheQuestion={doAnswerTheQuestion}
-      />}
-      {<Answer answer={question.answer} answerOpened={answerOpened} isCorrectAnser={isCorrectAnser} />}
+      <main className='it-page__main'>
+        {<Question
+          image={question.image}
+          question={question.question}
+          time={time}
+          questionOpened={!answerOpened}
+          handleAnswerTheQuestion={doAnswerTheQuestion}
+        />}
+        {<Answer answer={question.answer} answerOpened={answerOpened} isCorrectAnser={isCorrectAnser} />}
+      </main>
     </div>
   );
 };

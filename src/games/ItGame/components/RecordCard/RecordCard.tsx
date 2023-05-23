@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './RecordCard.css';
+import './RecordCard.scss';
 
 export interface RecordCardProps {
   id: string,

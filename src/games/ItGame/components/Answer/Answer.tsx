@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
-import './Answer.css';
+import './Answer.scss';
 import rightImage from '../../images/it-game_right.svg';
 import failImage from '../../images/it-game_fail.svg';
+import Button from '../../ui/Button/Button';
+import { ButtonType } from '../../utils/enums';
 
 interface AnswerProps {
   answer: string,
@@ -11,10 +13,11 @@ interface AnswerProps {
 
 const Answer: FC<AnswerProps> = ({ answer, answerOpened, isCorrectAnser }) => {
   return (
-    <main className={`it-game__main answer ${!answerOpened && 'display_none'}`}>
-      <p className='answer__text'>{isCorrectAnser ? 'Правильный ответ' : 'Неправильный ответ'}</p>
+    <section className={`answer ${answerOpened ? 'answer_showed' : ''}`}>
+      <p className='answer__text'>{isCorrectAnser ? 'Правильный ответ' : `Неправильный ответ. Верный: ${answer}`}</p>
       <img className='answer__image' src={isCorrectAnser ? rightImage : failImage} alt={isCorrectAnser ? 'Верно!' : 'Провал!'} />
-    </main>
+      <Button type={ButtonType.LINK} to='/it-game'>Вернуться</Button>
+    </section>
   );
 };
 

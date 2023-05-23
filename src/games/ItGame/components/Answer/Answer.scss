@@ -1,6 +1,14 @@
 .answer {
+  display: none;
+  width: 100%;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   min-height: 1064px;
+
+  &_showed {
+    display: flex;
+  }
 }
 
 .answer__text {
@@ -10,15 +18,15 @@
   line-height: 73px;
   font-weight: 600;
   text-transform: uppercase;
-}
 
-.answer__text::first-letter {
-  color: var(--color-text-accent);
+  &::first-letter {
+    color: var(--color-text-accent);
+  }
 }
 
 .answer__image {
   width: 120px;
   height: 120px;
-  margin: 0 auto;
+  margin: 0 auto 63px;
   object-fit: fill;
 }

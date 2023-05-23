@@ -11,16 +11,14 @@
   border-radius: 15px;
   transition-duration: .5s;
   cursor: pointer;
-}
 
-.button::first-letter {
-  color: var(--color-text-accent);
-}
-
-.button:hover {
-  color: var(--color-text-accent);
-}
-
-.button:focus {
-  transform: scale(.9);
+  &::first-letter {
+    color: var(--color-text-accent);
+  }
+  &:hover {
+    color: var(--color-text-accent);
+  }
+  &:active {
+    transform: scale(.9);
+  }
 }

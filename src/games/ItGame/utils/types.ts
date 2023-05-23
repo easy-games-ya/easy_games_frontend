@@ -1,8 +1,3 @@
-export interface IUserPass {
-  username: string,
-  password: string,
-};
-
 export interface IResponseSuccess {
   config: {},
   data: {},
@@ -12,18 +7,17 @@ export interface IResponseSuccess {
   statusText: string,
 };
 
-export interface IResponseCard {
-  description: string,
-  id: string,
-  question: string[],
+export interface ICategoryCard {
+  id: number,
   title: string,
+  description: string,
 };
 
 export interface IQuestion {
-  id: string,
-  question?: string,
+  id: number,
+  question: string,
   answer: string,
-  image?: string,
-  category?: string,
+  image: string | null,
+  category: number,
   score: number,
 };
